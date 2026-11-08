@@ -37,6 +37,11 @@ try {
    if(links.length<2||links.some(e=>!e.text||!e.href.includes('/sur-mesure/')))throw new Error('Missing questionnaire action');
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
    if(overflow>0)throw new Error(`Overflow: ${width} ${lang}`);
+   await page.locator('.c-hero [data-questionnaire-cta]').hover();
+   const hover=await page.locator('.c-hero [data-questionnaire-cta]').evaluate(e=>({color:getComputedStyle(e).color,paper:getComputedStyle(e).getPropertyValue('--paper').trim()}));
+   if(hover.color==='rgb(187, 44, 44)'||hover.color==='rgb(189, 40, 45)')throw new Error('Low-contrast red hover text');
+   await page.screenshot({path:`out/${width}-home-hover-${lang}.png`});
+   await page.mouse.move(0,0);
    await page.locator('.c-hero').screenshot({path:`out/${width}-home-cta-${lang}.png`});
    results.push({width,lang,links,overflow});
   }

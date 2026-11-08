@@ -1,6 +1,6 @@
 /* Secondary questionnaire action. Booking remains the solid primary button. */
 a.questionnaire-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;padding:12px 20px;border:1px solid currentColor;background:transparent;color:var(--ink,#20211f);font:500 16px/1.4 Arial,Helvetica,sans-serif;text-align:center;text-decoration:none;box-sizing:border-box;white-space:normal}
-a.questionnaire-cta:hover{background:var(--ink,#20211f);color:var(--paper,#f5f3ed);text-decoration:none}
+.c-home a.questionnaire-cta:hover,main a.questionnaire-cta:hover,.primary-nav a.questionnaire-cta:hover{background:var(--ink,#20211f);color:var(--paper,#f5f3ed);text-decoration:none}
 a.questionnaire-cta:focus-visible{outline:3px solid var(--red,#bd282d);outline-offset:4px}
 .questionnaire-end{padding:48px 0 64px;border-top:1px solid var(--line);width:min(1200px,calc(100% - 48px));margin-inline:auto}
 main.c-col .questionnaire-end{width:100%}
