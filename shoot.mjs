@@ -48,3 +48,6 @@ try {
   await browser?.close();
   server.kill();
 }
+const issues = report.results.filter(r => r.overflow > 0 || r.consoleErrors.length || r.pageErrors.length || r.failedRequests.length || r.httpErrors.length || r.missingImages?.length);
+console.log(`Captured ${report.results.filter(r=>r.screenshot).length}/${pages.length*sizes.length} views; ${issues.length} views with issues. Review out/index.html and out/report.json.`);
+if (issues.length || report.results.length !== pages.length*sizes.length) process.exitCode = 1;
