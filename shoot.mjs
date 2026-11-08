@@ -14,7 +14,7 @@ const report = {mode:baseUrl?'live':'local', baseUrl:origin, sourceRef:baseUrl?o
 await mkdir('out',{recursive:true});
 try {
   if (!baseUrl) for (let i=0;i<100;i++) {
-    try {if ((await fetch(origin)).ok) break;} catch {}
+    try {const response=await fetch(origin);await response.arrayBuffer();if (response.ok) break;} catch {}
     if (i===99) throw new Error('Static server did not start');
     await new Promise(resolve=>setTimeout(resolve,100));
   }

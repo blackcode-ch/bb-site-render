@@ -6,7 +6,7 @@ const server=spawn('python3',['-m','http.server','8765','--bind','127.0.0.1','--
 const results=[];
 let browser;
 try {
- for(let n=0;n<100;n++){try{if((await fetch('http://127.0.0.1:8765')).ok)break;}catch{}await new Promise(r=>setTimeout(r,100));}
+ for(let n=0;n<100;n++){try{const response=await fetch('http://127.0.0.1:8765');await response.arrayBuffer();if(response.ok)break;}catch{}await new Promise(r=>setTimeout(r,100));}
  browser=await chromium.launch({headless:true});
  for(const width of [390,1440]){
   const page=await browser.newPage({viewport:{width,height:900}});
