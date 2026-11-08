@@ -17,6 +17,11 @@ try {
   await page.locator('.motion-toggle').click();
   if(await page.locator('.motion-toggle').getAttribute('aria-pressed')!=='true')throw new Error('Pause failed');
   await page.locator('.tech-hero').screenshot({path:`out/${width}-technology-hero.png`});
+  for(const pose of [0,9000,17000]){
+   await page.evaluate(ms=>window.brigitteHero.seek(ms),pose);
+   await page.waitForTimeout(300);
+   await page.locator('#hero-box').screenshot({path:`out/${width}-technology-pose-${pose}.png`});
+  }
   results.push({width,check:'3D rendered and paused',state});
   if(width===390){
    await page.locator('.menu-toggle').click();

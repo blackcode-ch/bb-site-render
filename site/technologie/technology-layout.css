@@ -24,6 +24,10 @@ main.c-col .journey{max-width:none;gap:0}
 main.c-col .journey li{padding-block:24px;border-bottom:1px solid var(--line)}
 main.c-col .journey li:last-child{border-bottom:0}
 main.c-col .journey p{max-width:68ch}
+/* Prose-only sections form a centred reading column instead of an empty half-row. */
+main.c-col .content-section:not(#le-cadre-qui-convient-a-votre-etude):not(#secret-professionnel-et-nlpd):not(#une-methode-pas-un-outil-de-plus),main.c-col #la-box,main.c-col #pilote{max-width:780px;margin-inline:auto}
+main.c-col #comment-on-travaille .journey{max-width:none}
+main.c-col .content-prose{max-width:none}
 @media(min-width:900px){
  main.c-col .tech-hero{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;padding:48px;margin-bottom:112px}
  main.c-col #le-cadre-qui-convient-a-votre-etude,main.c-col #une-methode-pas-un-outil-de-plus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 48px;align-items:center}
