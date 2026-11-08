@@ -1,0 +1,10 @@
+/* Keep the existing equal-column hero and reserve space before 3D loads. */
+.c-home #hero-box{width:100%;min-width:0;margin:0;background:transparent;border:0}
+.c-home #hero-box .box-3d{position:relative;height:clamp(360px,35vw,500px);min-height:0}
+.c-home #hero-box .box-canvas,.c-home #hero-box .box-still{display:block;width:100%;height:100%;object-fit:contain}
+.c-home #hero-box .box-canvas[hidden],.c-home #hero-box .box-still[hidden]{display:none}
+.c-home #hero-box .box-callout{display:none}
+.c-home #hero-box figcaption{align-items:center;margin-top:0;padding-top:12px}
+.c-home #hero-box .box-hint{position:static;display:block;text-align:left;margin-top:8px}
+.c-home #hero-box .box-hint[hidden]{display:none}
+@media(max-width:600px){.c-home #hero-box .box-3d{height:320px}}

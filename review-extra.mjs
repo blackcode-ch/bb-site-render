@@ -67,6 +67,32 @@ try {
     results.push({width,route,lang,check:'Header CTA absent; in-page CTA retained; menu works',href});
    }
   }
+  await page.goto('http://127.0.0.1:8765/?box-review',{waitUntil:'networkidle'});
+  await page.locator('#hero-box').scrollIntoViewIfNeeded();
+  await page.waitForFunction(()=>window.brigitteHero?.inspect().frames>2,{},{timeout:30000});
+  await page.locator('.motion-toggle').click();
+  const before=await page.evaluate(()=>window.brigitteHero.inspect());
+  const bounds=await page.locator('.box-canvas').boundingBox();
+  await page.mouse.move(bounds.x+bounds.width*.4,bounds.y+bounds.height*.5);
+  await page.mouse.down();await page.mouse.move(bounds.x+bounds.width*.7,bounds.y+bounds.height*.5,{steps:8});await page.mouse.up();
+  const after=await page.evaluate(()=>window.brigitteHero.inspect());
+  if(Math.abs(after.offsetYaw-before.offsetYaw)<.1)throw new Error('Home drag did not rotate Box');
+  await page.locator('.box-3d').focus();await page.keyboard.press('ArrowRight');
+  if((await page.evaluate(()=>window.brigitteHero.inspect())).offsetYaw===after.offsetYaw)throw new Error('Home keyboard rotation failed');
+  await page.locator('.c-hero').screenshot({path:`out/${width}-home-3d-hero.png`});
+  const timings=await page.evaluate(()=>({paint:performance.getEntriesByName('first-contentful-paint')[0]?.startTime,model:performance.getEntriesByType('resource').find(e=>e.name.includes('/hero3d/hero3d.mjs'))?.startTime,load:performance.getEntriesByType('navigation')[0].loadEventEnd}));
+  if(!timings.paint||timings.model<timings.paint||timings.model<timings.load)throw new Error('Home 3D loaded before first paint/load');
+  results.push({width,check:'Home 3D renders, pauses, drag and keyboard rotate, loads after paint',before,after,timings});
+  await page.evaluate(()=>document.querySelector('.box-canvas').dispatchEvent(new Event('webglcontextlost',{cancelable:true})));
+  if(!await page.locator('.box-still').isVisible()||await page.locator('.box-canvas').isVisible())throw new Error('Home WebGL fallback failed');
+  results.push({width,check:'Home WebGL loss photo fallback visible'});
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await page.goto('http://127.0.0.1:8765/?box-review',{waitUntil:'networkidle'});
+  await page.locator('#hero-box').scrollIntoViewIfNeeded();
+  if(!await page.locator('.box-still').isVisible()||await page.locator('.box-canvas').isVisible())throw new Error('Home reduced-motion photo missing');
+  if(await page.evaluate(()=>performance.getEntriesByType('resource').some(e=>e.name.includes('/hero3d/player.mjs')||e.name.includes('/hero3d/three.'))))throw new Error('Reduced-motion downloaded 3D');
+  await page.locator('.c-hero').screenshot({path:`out/${width}-home-reduced-motion.png`});
+  results.push({width,check:'Home reduced-motion photo visible without 3D downloads'});
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.goto('http://127.0.0.1:8765/technologie/?box-review',{waitUntil:'networkidle'});
   if(!await page.locator('.box-still').isVisible()||await page.locator('.box-canvas').isVisible())throw new Error('Reduced-motion fallback failed');
