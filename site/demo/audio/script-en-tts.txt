@@ -1,0 +1,37 @@
+TTS-normalised version (audio only -- the on-screen text does not change). Based on the EN narration text (see chat-content.js/mini-content.js for the screen copy), applying the same normalisation bb-director asked for in FR/DE: dates spelled out, Sàrl spelled out as S.à r.l., parentheses replaced with commas/colons. Not explicitly reviewed by bb-director (their notes covered FR/DE) -- please flag anything that still reads awkwardly.
+
+demo-main-turn1
+Q: Write an email to Ms Rochat asking for the construction invoice and the acceptance report.
+A: Here is a draft. Please review it; it is only sent once you approve it.
+
+demo-main-turn2
+Q: Give me the chronology of the file.
+A: Here it is; each date points to its document. One point to be checked: two different end-of-works dates.
+
+demo-main-turn3
+Q: And prepare this month's time record.
+A: Three proposed entries, durations to be checked.
+
+demo-mini-conflicts
+Q: New matter: Valmont Immobilier SA versus Garage Duvoisin S.à r.l. Is there a conflict?
+A: Two matches to review: Valmont Immobilier is the opposing party in the Rochat SA file, ongoing; a partner of Garage Duvoisin appears in a file closed in twenty twenty-one. To be checked before accepting the matter.
+
+demo-mini-identity
+Q: For the new client Léman Holding SA, what is missing from the identification file?
+A: Received: commercial register extract, director's ID. Missing according to your checklist: beneficial owner declaration, signed power of attorney. To be checked.
+
+demo-mini-engagement
+Q: Prepare the engagement letter for Léman Holding: contract dispute, fees on a time basis.
+A: Draft prepared on your Litigation template. The matter details are filled in; the rate is left for you to complete. To be reviewed.
+
+demo-mini-email
+Q: Sort the emails received this morning.
+A: Seven emails: five matched to a file, two with no obvious file, for you to sort. Nothing is moved without your approval.
+
+demo-mini-deadlines
+Q: The Rochat SA judgment was served on October ninth, twenty twenty-six. What is the appeal deadline?
+A: Under the thirty-day rule you set: November eighth falls on a Sunday, proposed date Monday, November ninth, twenty twenty-six. To be checked: method of service and court holidays.
+
+demo-mini-style
+Q: Reply to Mr Favre, opposing counsel, who is asking to postpone the hearing, in the firm's style.
+A: Draft written in your usual phrasing: salutation, tone and signature. To be reviewed before sending.

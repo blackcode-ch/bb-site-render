@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light dark"><title>Film de mise en route · Brigitte</title><link rel="icon" href="../assets/mark.svg"><link rel="stylesheet" href="./film.css?v=8d91d06"><script type="module" src="./film.mjs?v=8d91d06"></script><meta name="description" content="Vue illustrative de la mise en route de Brigitte : arrivée, installation et connexion dans une étude."><link rel="canonical" href="https://brigittebox.com/film/"></head>
+<body>
+<main class="film" aria-label="Installation de Brigitte dans une étude">
+  <header class="film-heading"><span class="eyebrow" id="eyebrow">De la box à votre équipe</span><span class="illustrative" id="illustrative">Vue illustrative</span></header>
+  <div class="stage" id="stage">
+    <img id="poster" class="poster" src="./poster.png" alt="Une étude en coupe : quatre bureaux sont reliés à une box installée dans un meuble ouvert." width="1280" height="800">
+    <canvas id="scene" aria-hidden="true" hidden></canvas>
+    <div class="scene-label"><h1 id="caption">Installée dans votre étude,<br>sous votre contrôle.</h1><p id="detail">La box et les postes de travail, réunis sur le réseau interne.</p></div>
+    <span class="scene-note" id="scene-note">Réseau interne représenté</span>
+  </div>
+  <nav class="chapters" aria-label="Étapes du film" id="chapters">
+    <button type="button" data-chapter="0"><span>01</span><b>L’étude</b></button>
+    <button type="button" data-chapter="1"><span>02</span><b>L’arrivée</b></button>
+    <button type="button" data-chapter="2"><span>03</span><b>L’installation</b></button>
+    <button type="button" data-chapter="3"><span>04</span><b>La connexion</b></button>
+  </nav>
+  <div class="transport" id="transport" hidden>
+    <button id="play" type="button" aria-label="Mettre le film en pause">Pause</button>
+    <label class="sr-only" for="timeline" id="timeline-label">Position dans le film</label><input id="timeline" type="range" min="0" max="36" step="0.1" value="0" aria-describedby="clock">
+    <output id="clock" for="timeline">0:00 / 0:36</output>
+    <button id="restart" type="button" title="Revoir depuis le début" aria-label="Revoir depuis le début">↺</button>
+  </div>
+  <footer><span id="hint">Film illustratif · 36 secondes · sans son</span><select id="language" aria-label="Langue"><option value="fr">FR</option><option value="de">DE</option><option value="en">EN</option><option value="it">IT</option><option value="es">ES</option></select><a data-privacy-link href="/confidentialite/?lang=fr" target="_top">Confidentialité</a></footer>
+  <p class="sr-only" id="description">Vue d’une étude avec ses bureaux. Deux membres de l’équipe apportent la box, l’installent dans un meuble ouvert et relient les postes au réseau interne. Ce schéma illustre l’installation ; il ne décrit pas tous les flux possibles d’un déploiement réel.</p>
+</main><script src="../privacy-links.js?v=8d91d06" defer></script></body></html>

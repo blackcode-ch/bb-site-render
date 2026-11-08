@@ -1,0 +1,221 @@
+{
+  "totalCost": 0.027871199999999995,
+  "files": [
+    {
+      "file": "demo-main-turn1-fr.m4a",
+      "lang": "fr",
+      "group": "main",
+      "turn": 1,
+      "expected": "Écris un e-mail à Madame Rochat pour lui demander la facture des travaux et le procès-verbal de réception. ... Voici un projet. Relisez-le, je ne l'envoie qu'après votre validation.",
+      "heard": "Écris un e-mail à Madame Rochat pour lui demander la facture des travaux et le procès-verbal de réception. Voici un projet. Relisez-le, je ne l’envoie qu’après votre validation."
+    },
+    {
+      "file": "demo-main-turn2-fr.m4a",
+      "lang": "fr",
+      "group": "main",
+      "turn": 2,
+      "expected": "Donne-moi la chronologie du dossier. ... La voici, chaque date renvoie à sa pièce. Un point à vérifier : deux dates de fin des travaux.",
+      "heard": "Donne-moi la chronologie du dossier. ... La voici, chaque date renvoie à sa pièce. Un point à vérifier : deux dates de fin des travaux."
+    },
+    {
+      "file": "demo-main-turn3-fr.m4a",
+      "lang": "fr",
+      "group": "main",
+      "turn": 3,
+      "expected": "Et prépare le relevé de temps du mois. ... Trois saisies proposées, durées à vérifier.",
+      "heard": "Et prépare le relevé de temps du mois. ... Trois saisies proposées, durées à vérifier."
+    },
+    {
+      "file": "demo-main-turn1-de.m4a",
+      "lang": "de",
+      "group": "main",
+      "turn": 1,
+      "expected": "Schreib eine E-Mail an Frau Rochat und bitte um die Bauabrechnung und das Abnahmeprotokoll. ... Hier ein Entwurf. Bitte prüfen Sie ihn, ich sende ihn erst nach Ihrer Freigabe.",
+      "heard": "Schreib eine E-Mail an Frau Rochat und bitte um die Bauabrechnung und das Abnahmeprotokoll. ... Hier ein Entwurf. Bitte prüfen Sie ihn, ich sende ihn erst nach Ihrer Freigabe."
+    },
+    {
+      "file": "demo-main-turn2-de.m4a",
+      "lang": "de",
+      "group": "main",
+      "turn": 2,
+      "expected": "Gib mir die Chronologie des Dossiers. ... Hier ist sie, jedes Datum verweist auf sein Dokument. Ein Punkt zu prüfen: zwei Daten für das Bauende.",
+      "heard": "Gib mir die Chronologie des Dossiers. ... Hier ist sie, jedes Datum verweist auf sein Dokument. Ein Punkt zu prüfen: zwei Daten für das Bauende."
+    },
+    {
+      "file": "demo-main-turn3-de.m4a",
+      "lang": "de",
+      "group": "main",
+      "turn": 3,
+      "expected": "Und bereite die Zeiterfassung des Monats vor. ... Drei vorgeschlagene Einträge, Dauer zu prüfen.",
+      "heard": "Und bereite die Zeiterfassung des Monats vor. ... Drei vorgeschlagene Einträge, Dauer zu prüfen."
+    },
+    {
+      "file": "demo-main-turn1-en.m4a",
+      "lang": "en",
+      "group": "main",
+      "turn": 1,
+      "expected": "Write an email to Ms Rochat asking for the construction invoice and the acceptance report. ... Here is a draft. Please review it; it is only sent once you approve it.",
+      "heard": "Write an email to Ms Rochat asking for the construction invoice and the acceptance report. ... Here is a draft. Please review it; it is only sent once you approve it."
+    },
+    {
+      "file": "demo-main-turn2-en.m4a",
+      "lang": "en",
+      "group": "main",
+      "turn": 2,
+      "expected": "Give me the chronology of the file. ... Here it is; each date points to its document. One point to be checked: two different end-of-works dates.",
+      "heard": "Give me the chronology of the file. ... Here it is; each date points to its document. One point to be checked: two different end-of-works dates."
+    },
+    {
+      "file": "demo-main-turn3-en.m4a",
+      "lang": "en",
+      "group": "main",
+      "turn": 3,
+      "expected": "And prepare this month's time record. ... Three proposed entries, durations to be checked.",
+      "heard": "And prepare this month's time record. ... Three proposed entries, durations to be checked."
+    },
+    {
+      "file": "demo-mini-conflicts-fr.m4a",
+      "lang": "fr",
+      "group": "mini",
+      "function": "conflicts",
+      "expected": "Nouveau mandat : Valmont Immobilier SA contre Garage Duvoisin S.à r.l. Y a-t-il un conflit ? ... Deux rapprochements à examiner : Valmont Immobilier est partie adverse dans le dossier Rochat SA, en cours ; un associé de Garage Duvoisin apparaît dans un dossier clos en deux mille vingt et un. À vérifier avant d'accepter le mandat.",
+      "heard": "Nouveau mandat : Valmont Immobilier SA contre Garage Duvoisin S.à r.l. Y a-t-il un conflit ? ... Deux rapprochements à examiner : Valmont Immobilier est partie adverse dans le dossier Rochat SA, en cours ; un associé de Garage Duvoisin apparaît dans un dossier clos en 2021. À vérifier avant d'accepter le mandat."
+    },
+    {
+      "file": "demo-mini-identity-fr.m4a",
+      "lang": "fr",
+      "group": "mini",
+      "function": "identity",
+      "expected": "Pour le nouveau client Léman Holding SA, qu'est-ce qui manque au dossier d'identification ? ... Reçus : extrait du registre du commerce, pièce d'identité de l'administrateur. Manquent selon votre liste : déclaration de l'ayant droit économique, procuration signée. À vérifier.",
+      "heard": "Pour le nouveau client Léman Holding SA, qu'est-ce qui manque au dossier d'identification ? ... Reçus : extrait du registre du commerce, pièce d'identité de l'administrateur. Manquent selon votre liste : déclaration de l’ayant droit économique, procuration signée. À vérifier."
+    },
+    {
+      "file": "demo-mini-engagement-fr.m4a",
+      "lang": "fr",
+      "group": "mini",
+      "function": "engagement",
+      "expected": "Prépare la lettre d'engagement pour Léman Holding : litige contractuel, honoraires au temps passé. ... Projet préparé sur votre modèle Contentieux. Les éléments du mandat sont repris ; le tarif reste à compléter par vous. À relire.",
+      "heard": "Prépare la lettre d'engagement pour Léman Holding : litige contractuel, honoraires au temps passé. Projet préparé sur votre modèle Contentieux. Les éléments du mandat sont repris ; le tarif reste à compléter par vous. À relire."
+    },
+    {
+      "file": "demo-mini-email-fr.m4a",
+      "lang": "fr",
+      "group": "mini",
+      "function": "email",
+      "expected": "Classe les courriels reçus ce matin. ... Sept courriels : cinq rattachés à un dossier, deux sans dossier évident, à classer par vous. Rien n'est déplacé sans votre validation.",
+      "heard": "Classe les courriels reçus ce matin. ... Sept courriels : cinq rattachés à un dossier, deux sans dossier évident, à classer par vous. Rien n'est déplacé sans votre validation."
+    },
+    {
+      "file": "demo-mini-deadlines-fr.m4a",
+      "lang": "fr",
+      "group": "mini",
+      "function": "deadlines",
+      "expected": "Le jugement Rochat SA a été notifié le neuf octobre deux mille vingt-six. Quel délai d'appel ? ... Selon la règle de trente jours que vous avez fixée : le huit novembre tombe un dimanche, date proposée lundi neuf novembre deux mille vingt-six. À vérifier : mode de notification et féries.",
+      "heard": "Le jugement Rochat SA a été notifié le neuf octobre deux mille vingt-six. Quel délai d'appel ? ... Selon la règle de trente jours que vous avez fixée : le huit novembre tombe un dimanche, date proposée lundi neuf novembre deux mille vingt-six. À vérifier : mode de notification et féries."
+    },
+    {
+      "file": "demo-mini-style-fr.m4a",
+      "lang": "fr",
+      "group": "mini",
+      "function": "style",
+      "expected": "Réponds à Maître Favre, qui demande un report d'audience, dans le style de l'étude. ... Projet rédigé selon vos formulations habituelles : formule d'appel, ton et signature. À relire avant envoi.",
+      "heard": "Réponds à Maître Favre, qui demande un report d'audience, dans le style de l'étude. ... Projet rédigé selon vos formulations habituelles : formule d’appel, ton et signature. À relire avant envoi."
+    },
+    {
+      "file": "demo-mini-conflicts-de.m4a",
+      "lang": "de",
+      "group": "mini",
+      "function": "conflicts",
+      "expected": "Neues Mandat: Valmont Immobilier SA gegen Garage Duvoisin S.à r.l. Gibt es einen Konflikt? ... Zwei Treffer zur Prüfung: Valmont Immobilier ist Gegenpartei im Dossier Rochat SA, laufend; ein Gesellschafter der Garage Duvoisin erscheint in einem zweitausendeinundzwanzig abgeschlossenen Dossier. Zu prüfen, bevor Sie das Mandat annehmen.",
+      "heard": "Neues Mandat: Valmont Immobilier SA gegen Garage Duvoisin S.à r.l. Gibt es einen Konflikt? ... Zwei Treffer zur Prüfung: Valmont Immobilier ist Gegenpartei im Dossier Rochat SA, laufend; ein Gesellschafter der Garage Duvoisin erscheint in einem zweitausendeinundzwanzig abgeschlossenen Dossier. Zu prüfen, bevor Sie das Mandat annehmen."
+    },
+    {
+      "file": "demo-mini-identity-de.m4a",
+      "lang": "de",
+      "group": "mini",
+      "function": "identity",
+      "expected": "Was fehlt im Identifikationsdossier des neuen Mandanten Léman Holding SA? ... Erhalten: Handelsregisterauszug, Ausweis des Verwaltungsrats. Fehlen gemäss Ihrer Liste: Erklärung zur wirtschaftlich berechtigten Person, unterzeichnete Vollmacht. Zu prüfen.",
+      "heard": "Was fehlt im Identifikationsdossier des neuen Mandanten Léman Holding SA? ... Erhalten: Handelsregisterauszug, Ausweis des Verwaltungsrats. Fehlen gemäss Ihrer Liste: Erklärung zur wirtschaftlich berechtigten Person, unterzeichnete Vollmacht. Zu prüfen."
+    },
+    {
+      "file": "demo-mini-engagement-de.m4a",
+      "lang": "de",
+      "group": "mini",
+      "function": "engagement",
+      "expected": "Bereite das Mandatsschreiben für Léman Holding vor: Vertragsstreit, Honorar nach Aufwand. ... Entwurf auf Ihrer Vorlage Prozess erstellt. Die Angaben zum Mandat sind übernommen; den Tarif ergänzen Sie selbst. Zu prüfen.",
+      "heard": "Bereite das Mandatsschreiben für Léman Holding vor: Vertragsstreit, Honorar nach Aufwand. ... Entwurf auf Ihrer Vorlage Prozess erstellt. Die Angaben zum Mandat sind übernommen; den Tarif ergänzen Sie selbst. Zu prüfen."
+    },
+    {
+      "file": "demo-mini-email-de.m4a",
+      "lang": "de",
+      "group": "mini",
+      "function": "email",
+      "expected": "Ordne die heute Morgen eingegangenen E-Mails zu. ... Sieben E-Mails: fünf einem Dossier zugeordnet, zwei ohne klares Dossier, von Ihnen zuzuordnen. Nichts wird ohne Ihre Freigabe verschoben.",
+      "heard": "Ordne die heute Morgen eingegangenen E-Mails zu. Sieben E-Mails: fünf einem Dossier zugeordnet, zwei ohne klares Dossier, von Ihnen zuzuordnen. Nichts wird ohne Ihre Freigabe verschoben."
+    },
+    {
+      "file": "demo-mini-deadlines-de.m4a",
+      "lang": "de",
+      "group": "mini",
+      "function": "deadlines",
+      "expected": "Das Urteil Rochat SA wurde am neunten Oktober zweitausendsechsundzwanzig zugestellt. Welche Berufungsfrist? ... Nach der von Ihnen festgelegten dreissig-Tage-Regel: Der achte November fällt auf einen Sonntag, vorgeschlagenes Datum Montag, neunter November zweitausendsechsundzwanzig. Zu prüfen: Zustellungsart und Gerichtsferien.",
+      "heard": "Das Urteil Rochat SA wurde am neunten Oktober zweitausendsechsundzwanzig zugestellt. Welche Berufungsfrist? ... Nach der von Ihnen festgelegten dreissig-Tage-Regel: Der achte November fällt auf einen Sonntag, vorgeschlagenes Datum Montag, neunter November zweitausendsechsundzwanzig. Zu prüfen: Zustellungsart und Gerichtsferien."
+    },
+    {
+      "file": "demo-mini-style-de.m4a",
+      "lang": "de",
+      "group": "mini",
+      "function": "style",
+      "expected": "Antworte Rechtsanwalt Favre, der eine Verschiebung der Verhandlung beantragt, im Stil der Kanzlei. ... Entwurf nach Ihren üblichen Formulierungen: Anrede, Ton und Signatur. Vor dem Versand zu prüfen.",
+      "heard": "Antworte Rechtsanwalt Favre, der eine Verschiebung der Verhandlung beantragt, im Stil der Kanzlei. Entwurf nach Ihren üblichen Formulierungen: Anrede, Ton und Signatur. Vor dem Versand zu prüfen."
+    },
+    {
+      "file": "demo-mini-conflicts-en.m4a",
+      "lang": "en",
+      "group": "mini",
+      "function": "conflicts",
+      "expected": "New matter: Valmont Immobilier SA versus Garage Duvoisin S.à r.l. Is there a conflict? ... Two matches to review: Valmont Immobilier is the opposing party in the Rochat SA file, ongoing; a partner of Garage Duvoisin appears in a file closed in twenty twenty-one. To be checked before accepting the matter.",
+      "heard": "New matter: Valmont Immobilier SA versus Garage Duvoisin S.à r.l. Is there a conflict? ... Two matches to review: Valmont Immobilier is the opposing party in the Rochat SA file, ongoing; a partner of Garage Duvoisin appears in a file closed in twenty twenty-one. To be checked before accepting the matter."
+    },
+    {
+      "file": "demo-mini-identity-en.m4a",
+      "lang": "en",
+      "group": "mini",
+      "function": "identity",
+      "expected": "For the new client Léman Holding SA, what is missing from the identification file? ... Received: commercial register extract, director's ID. Missing according to your checklist: beneficial owner declaration, signed power of attorney. To be checked.",
+      "heard": "For the new client Léman Holding SA, what is missing from the identification file? ... Received: commercial register extract, director's ID. Missing according to your checklist: beneficial owner declaration, signed power of attorney. To be checked."
+    },
+    {
+      "file": "demo-mini-engagement-en.m4a",
+      "lang": "en",
+      "group": "mini",
+      "function": "engagement",
+      "expected": "Prepare the engagement letter for Léman Holding: contract dispute, fees on a time basis. ... Draft prepared on your Litigation template. The matter details are filled in; the rate is left for you to complete. To be reviewed.",
+      "heard": "Prepare the engagement letter for Léman Holding: contract dispute, fees on a time basis. ... Draft prepared on your Litigation template. The matter details are filled in; the rate is left for you to complete. To be reviewed."
+    },
+    {
+      "file": "demo-mini-email-en.m4a",
+      "lang": "en",
+      "group": "mini",
+      "function": "email",
+      "expected": "Sort the emails received this morning. ... Seven emails: five matched to a file, two with no obvious file, for you to sort. Nothing is moved without your approval.",
+      "heard": "Sort the emails received this morning. ... Seven emails: five matched to a file, two with no obvious file, for you to sort. Nothing is moved without your approval."
+    },
+    {
+      "file": "demo-mini-deadlines-en.m4a",
+      "lang": "en",
+      "group": "mini",
+      "function": "deadlines",
+      "expected": "The Rochat SA judgment was served on October ninth, twenty twenty-six. What is the appeal deadline? ... Under the thirty-day rule you set: November eighth falls on a Sunday, proposed date Monday, November ninth, twenty twenty-six. To be checked: method of service and court holidays.",
+      "heard": "The Rochat SA judgment was served on October ninth, twenty twenty-six. What is the appeal deadline? ... Under the thirty-day rule you set: November eighth falls on a Sunday, proposed date Monday, November ninth, twenty twenty-six. To be checked: method of service and court holidays."
+    },
+    {
+      "file": "demo-mini-style-en.m4a",
+      "lang": "en",
+      "group": "mini",
+      "function": "style",
+      "expected": "Reply to Mr Favre, opposing counsel, who is asking to postpone the hearing, in the firm's style. ... Draft written in your usual phrasing: salutation, tone and signature. To be reviewed before sending.",
+      "heard": "Reply to Mr Favre, opposing counsel, who is asking to postpone the hearing, in the firm’s style. Draft written in your usual phrasing: salutation, tone and signature. To be reviewed before sending."
+    }
+  ]
+}

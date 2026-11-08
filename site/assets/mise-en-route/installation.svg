@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none">
+ <g stroke="#555950" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M24 173H296M205 34H290V173" stroke="#dad9cf"/>
+  <path d="M37 173V58H81V173M48 72H69M48 79H69" stroke="#dad9cf"/>
+  <rect x="220" y="49" width="64" height="42" rx="3" fill="#eeede5"/>
+  <path d="M246 91V101M238 101H266"/>
+  <g class="install-screen">
+   <rect x="225" y="54" width="54" height="31" rx="1" fill="#e7d8c1" stroke="none"/>
+   <path d="M234 64H259M234 71H269M234 78H251" stroke="#96794f"/>
+  </g>
+  <rect x="209" y="119" width="66" height="47" rx="3" fill="#ebe9df"/>
+  <path d="M217 132H262M217 141H262M217 150H249" stroke="#b3b3a6"/>
+  <g class="install-technician">
+   <circle cx="155" cy="76" r="10" fill="#f7f5ec"/>
+   <path d="M147 68Q155 58 165 69M146 89L135 98L136 130H170L171 99L163 89" fill="#f7f5ec"/>
+   <path d="M146 90L155 105L163 90M155 105V124M145 130L140 168H151L156 142L163 168H174L166 130"/>
+   <path d="M139 101L128 118L136 123"/>
+   <path class="install-arm" d="M169 101L184 123L208 132" stroke-width="3"/>
+   <rect x="115" y="139" width="23" height="18" rx="2" fill="#eeede5"/>
+   <path d="M121 139V134H132V139"/>
+  </g>
+  <g class="install-box">
+   <path d="M210 105L224 97H275L262 105Z" fill="#d8b889" stroke="#96794f"/>
+   <path d="M210 105H262V120H210Z" fill="#c3a375" stroke="#96794f"/>
+   <path d="M262 105L275 97V112L262 120Z" fill="#96794f" stroke="#96794f"/>
+   <path d="M216 109V116M221 109V116M226 109V116M231 109V116M236 109V116M241 109V116M246 109V116M251 109V116" stroke="#eee3cc" stroke-width="1"/>
+  </g>
+  <path class="install-cable" d="M270 112H289V157H275" stroke="#96794f" stroke-width="2"/>
+  <path class="install-plug" d="M204 130H213V135H204Z" fill="#96794f" stroke="#96794f"/>
+  <circle class="install-screen" cx="264" cy="155" r="2" fill="#96794f" stroke="none"/>
+ </g>
+</svg>

@@ -1,0 +1,12 @@
+(() => {
+  const lang = new URL(location.href).searchParams.get('lang') || 'fr';
+  const t = {
+    fr: { animIntro: 'L’installation, la box et l’accompagnement, en quelques animations.', noText: 'Animations sans son.', box: 'La box Brigitte', sceneinstallation: 'Installation sur place', scenetraining: 'Formation de l’équipe', scenesupport: 'Support continu', tag: 'En images', title: 'Brigitte en images', installation: 'Installation dans votre étude', faq: 'Questions fréquentes', illustrative: 'Vue illustrative', motionPause: 'Mettre en pause' },
+    de: { animIntro: 'Installation, Box und Begleitung in einigen Animationen.', noText: 'Animationen ohne Ton.', box: 'Die Brigitte Box', sceneinstallation: 'Installation vor Ort', scenetraining: 'Schulung des Teams', scenesupport: 'Laufender Support', tag: 'In Bildern', title: 'Brigitte in Bildern', installation: 'Installation in Ihrer Kanzlei', faq: 'Häufige Fragen', illustrative: 'Illustrative Ansicht', motionPause: 'Pausieren' },
+    en: { animIntro: 'Installation, the box and our support, in a few animations.', noText: 'Silent animations.', box: 'The Brigitte Box', sceneinstallation: 'On-site installation', scenetraining: 'Team training', scenesupport: 'Ongoing support', tag: 'In pictures', title: 'Brigitte in pictures', installation: 'Installation in your firm', faq: 'Frequently asked questions', illustrative: 'Illustrative view', motionPause: 'Pause' },
+    es: { animIntro: 'La instalación, la caja y el acompañamiento, en unas pocas animaciones.', noText: 'Animaciones sin sonido.', box: 'La caja Brigitte', sceneinstallation: 'Instalación in situ', scenetraining: 'Formación del equipo', scenesupport: 'Soporte continuo', tag: 'En imágenes', title: 'Brigitte en imágenes', installation: 'Instalación en su despacho', faq: 'Preguntas frecuentes', illustrative: 'Vista ilustrativa', motionPause: 'Pausar' },
+    it: { animIntro: 'L’installazione, il box e l’accompagnamento, in alcune animazioni.', noText: 'Animazioni senza audio.', box: 'Il box Brigitte', sceneinstallation: 'Installazione sul posto', scenetraining: 'Formazione del team', scenesupport: 'Supporto continuo', tag: 'In immagini', title: 'Brigitte in immagini', installation: 'Installazione nel vostro studio', faq: 'Domande frequenti', illustrative: 'Vista illustrativa', motionPause: 'Metti in pausa' }
+  }[lang] || {};
+  document.querySelectorAll('[data-video-i]').forEach(n => { n.textContent = t[n.dataset.videoI] || n.textContent; });
+  document.title = t.title + ' · Brigitte';
+})();

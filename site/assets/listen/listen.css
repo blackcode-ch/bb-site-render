@@ -1,0 +1,6 @@
+.listen-row{display:flex;align-items:center;margin:12px 0 0}
+.listen-toggle{display:grid;place-items:center;width:32px;height:32px;padding:0;border:1px solid var(--line,#d9d8d0);border-radius:50%;background:transparent;color:var(--ink,#262923);cursor:pointer}
+.listen-toggle:hover{background:var(--tint,#eeede7)}
+.listen-toggle:focus-visible{outline:2px solid var(--red,#bb2c2c);outline-offset:2px}
+.listen-toggle[aria-pressed="true"]{background:var(--ink,#262923);color:#fff;border-color:var(--ink,#262923)}
+@media(prefers-reduced-motion:reduce){.listen-row{display:flex}}

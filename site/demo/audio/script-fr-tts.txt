@@ -1,0 +1,37 @@
+Version normalisée pour la lecture TTS (audio uniquement -- le texte affiché à l'écran ne change pas). Basé sur script-fr.txt, avec les corrections de bb-director : Mme → Madame, Me → Maître, dates en toutes lettres, Sàrl → S.à r.l. (épelé), parenthèses → virgules.
+
+demo-main-turn1
+Q: Écris un e-mail à Madame Rochat pour lui demander la facture des travaux et le procès-verbal de réception.
+A: Voici un projet. Relisez-le, je ne l'envoie qu'après votre validation.
+
+demo-main-turn2
+Q: Donne-moi la chronologie du dossier.
+A: La voici, chaque date renvoie à sa pièce. Un point à vérifier : deux dates de fin des travaux.
+
+demo-main-turn3
+Q: Et prépare le relevé de temps du mois.
+A: Trois saisies proposées, durées à vérifier.
+
+demo-mini-conflicts
+Q: Nouveau mandat : Valmont Immobilier SA contre Garage Duvoisin S.à r.l. Y a-t-il un conflit ?
+A: Deux rapprochements à examiner : Valmont Immobilier est partie adverse dans le dossier Rochat SA, en cours ; un associé de Garage Duvoisin apparaît dans un dossier clos en deux mille vingt et un. À vérifier avant d'accepter le mandat.
+
+demo-mini-identity
+Q: Pour le nouveau client Léman Holding SA, qu'est-ce qui manque au dossier d'identification ?
+A: Reçus : extrait du registre du commerce, pièce d'identité de l'administrateur. Manquent selon votre liste : déclaration de l'ayant droit économique, procuration signée. À vérifier.
+
+demo-mini-engagement
+Q: Prépare la lettre d'engagement pour Léman Holding : litige contractuel, honoraires au temps passé.
+A: Projet préparé sur votre modèle Contentieux. Les éléments du mandat sont repris ; le tarif reste à compléter par vous. À relire.
+
+demo-mini-email
+Q: Classe les courriels reçus ce matin.
+A: Sept courriels : cinq rattachés à un dossier, deux sans dossier évident, à classer par vous. Rien n'est déplacé sans votre validation.
+
+demo-mini-deadlines
+Q: Le jugement Rochat SA a été notifié le neuf octobre deux mille vingt-six. Quel délai d'appel ?
+A: Selon la règle de trente jours que vous avez fixée : le huit novembre tombe un dimanche, date proposée lundi neuf novembre deux mille vingt-six. À vérifier : mode de notification et féries.
+
+demo-mini-style
+Q: Réponds à Maître Favre, qui demande un report d'audience, dans le style de l'étude.
+A: Projet rédigé selon vos formulations habituelles : formule d'appel, ton et signature. À relire avant envoi.

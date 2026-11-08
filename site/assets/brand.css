@@ -1,0 +1,9 @@
+/* Andrea's final selection: study 14 box, study 01 typography. */
+.brigitte-identity{display:inline-flex;align-items:center;gap:.32em;line-height:1;white-space:nowrap;color:inherit;font-family:Arial,Helvetica,sans-serif;font-size:42px;font-weight:400;letter-spacing:normal;text-decoration:none;--brand-accent:#bd282d}
+.brigitte-box{position:relative;display:block;flex:0 0 1em;width:1em;height:1em;box-sizing:border-box;border:.065em solid currentColor;border-left:.18em solid var(--brand-accent)}
+.brigitte-box::after{content:'';position:absolute;right:.13em;top:.44em;width:.1em;height:.1em;background:currentColor}
+.brigitte-type{display:flex;flex-direction:column;gap:.18em}.brigitte-name{font-size:1em;font-weight:700;letter-spacing:-.065em;line-height:1}.brigitte-name::after{content:'';display:inline-block;width:.16em;height:.16em;background:var(--brand-accent);margin-left:.12em}
+.brigitte-identity .brigitte-descriptor{display:block;font-size:.17em;letter-spacing:.42em;font-weight:500;line-height:1;margin:0 0 0 .1em}
+.hero-brand-signature .brigitte-identity{font-size:27px!important;letter-spacing:normal!important;--brand-accent:#ee514f;color:#f6f4ef!important}
+.topbar .brigitte-identity{font-size:31px}.topbar .brigitte-identity span{color:inherit;margin-left:0}.topbar .brigitte-identity .brigitte-name{font-size:1em}.topbar .brigitte-identity .brigitte-box{font-size:1em}
+@media(max-width:540px){.masthead .brigitte-identity{font-size:32px}.topbar .brigitte-identity{font-size:27px}}

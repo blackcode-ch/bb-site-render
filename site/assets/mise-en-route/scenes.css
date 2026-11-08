@@ -1,0 +1,42 @@
+/* N6: local component rules only. Static SVG posters have no animation. */
+.setup-animation[data-setup-scene]{position:relative;aspect-ratio:16/10;overflow:hidden;background:#f1efe7;color:#555950;isolation:isolate}
+.setup-animation[data-setup-scene] .route-poster,.setup-animation[data-setup-scene] .route-art{display:block;width:100%;height:100%;object-fit:contain;margin:0}
+.setup-animation[data-setup-scene] [hidden]{display:none!important}
+.route-art *{transform-box:view-box;animation-duration:7s;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-delay:var(--route-phase,0s);animation-play-state:paused}
+.setup-animation[data-running=true] .route-art *{animation-play-state:running}
+.route-art .install-technician{animation-name:route-arrive}
+.route-art .install-box{animation-name:route-place}
+.route-art .install-arm{transform-origin:169px 101px;animation-name:route-plug-arm}
+.route-art .install-cable,.route-art .install-plug{animation-name:route-plug}
+.route-art .install-screen{animation-name:route-screen}
+.route-art .training-hand{transform-origin:89px 126px;animation-name:route-question-hand}
+.route-art .training-question{animation-name:route-question}
+.route-art .training-result{animation-name:route-result}
+.route-art .training-check{animation-name:route-check;transform-origin:199px 90px}
+.route-art .support-hand{transform-origin:64px 99px;animation-name:route-authorise-hand}
+.route-art .support-authorise{animation-name:route-authorise}
+.route-art .support-shackle{transform-origin:164px 111px;animation-name:route-open}
+.route-art .support-link{animation-name:route-link}
+.route-art .support-pulse{animation-name:route-pulse}
+.route-art .support-fix{animation-name:route-fix}
+.route-motion-control{display:grid;place-items:center;margin:8px 0 0 auto;padding:0;width:44px;height:44px;border:1px solid var(--line,#d6d2c8);background:transparent;color:var(--ink,#555950);cursor:pointer}
+.route-motion-control svg{width:20px;height:20px}
+.route-motion-control:hover{background:#e5e2d7}
+.route-motion-control:focus-visible{outline:2px solid #96794f;outline-offset:3px}
+.route-motion-control[hidden]{display:none}
+@keyframes route-arrive{0%,5%{transform:translateX(-64px);opacity:0}18%,80%{transform:translateX(0);opacity:1}92%,100%{transform:translateX(0);opacity:0}}
+@keyframes route-place{0%,5%{transform:translate(-123px,17px);opacity:0}18%{transform:translate(-59px,17px);opacity:1}40%,84%{transform:translate(0,0);opacity:1}94%,100%{transform:translate(0,0);opacity:0}}
+@keyframes route-plug-arm{0%,38%{transform:rotate(-16deg)}52%,75%{transform:rotate(0)}90%,100%{transform:rotate(-16deg)}}
+@keyframes route-plug{0%,43%{opacity:0}57%,84%{opacity:1}94%,100%{opacity:0}}
+@keyframes route-screen{0%,53%{opacity:.12}65%,84%{opacity:1}95%,100%{opacity:.12}}
+@keyframes route-question-hand{0%,10%{transform:rotate(8deg)}25%,42%{transform:rotate(-20deg)}56%,100%{transform:rotate(8deg)}}
+@keyframes route-question{0%,12%{opacity:0;transform:translateY(3px)}24%,40%{opacity:1;transform:translateY(0)}51%,100%{opacity:0;transform:translateY(0)}}
+@keyframes route-result{0%,30%{opacity:.1}49%,82%{opacity:1}96%,100%{opacity:.1}}
+@keyframes route-check{0%,47%{opacity:0;transform:scale(.85)}63%,82%{opacity:1;transform:scale(1)}96%,100%{opacity:0;transform:scale(1)}}
+@keyframes route-authorise-hand{0%,5%{transform:rotate(12deg)}17%,28%{transform:rotate(0)}39%,65%{transform:rotate(12deg)}73%,81%{transform:rotate(0)}91%,100%{transform:rotate(12deg)}}
+@keyframes route-authorise{0%,10%{opacity:.3}20%,77%{opacity:1}89%,100%{opacity:.3}}
+@keyframes route-open{0%,21%{transform:translateY(0) rotate(0)}32%,68%{transform:translateY(-5px) rotate(-22deg)}80%,100%{transform:translateY(0) rotate(0)}}
+@keyframes route-link{0%,32%{opacity:0}40%,62%{opacity:1}70%,100%{opacity:0}}
+@keyframes route-pulse{0%,40%{opacity:0;transform:scale(.65);transform-origin:218px 126px}49%{opacity:.8;transform:scale(1)}59%,100%{opacity:0;transform:scale(.65)}}
+@keyframes route-fix{0%,44%{opacity:0}55%,63%{opacity:1}70%,100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.route-art *{animation:none!important}.route-motion-control{display:none}}

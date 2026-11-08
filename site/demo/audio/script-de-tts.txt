@@ -1,0 +1,37 @@
+Für die TTS-Lesung normalisierte Fassung (nur Audio -- der auf dem Bildschirm angezeigte Text bleibt unverändert). Basiert auf script-de.txt, mit bb-directors Korrekturen: Daten ausgeschrieben, Sàrl → S.à r.l. (buchstabiert), Klammern → Kommas.
+
+demo-main-turn1
+Q: Schreib eine E-Mail an Frau Rochat und bitte um die Bauabrechnung und das Abnahmeprotokoll.
+A: Hier ein Entwurf. Bitte prüfen Sie ihn, ich sende ihn erst nach Ihrer Freigabe.
+
+demo-main-turn2
+Q: Gib mir die Chronologie des Dossiers.
+A: Hier ist sie, jedes Datum verweist auf sein Dokument. Ein Punkt zu prüfen: zwei Daten für das Bauende.
+
+demo-main-turn3
+Q: Und bereite die Zeiterfassung des Monats vor.
+A: Drei vorgeschlagene Einträge, Dauer zu prüfen.
+
+demo-mini-conflicts
+Q: Neues Mandat: Valmont Immobilier SA gegen Garage Duvoisin S.à r.l. Gibt es einen Konflikt?
+A: Zwei Treffer zur Prüfung: Valmont Immobilier ist Gegenpartei im Dossier Rochat SA, laufend; ein Gesellschafter der Garage Duvoisin erscheint in einem zweitausendeinundzwanzig abgeschlossenen Dossier. Zu prüfen, bevor Sie das Mandat annehmen.
+
+demo-mini-identity
+Q: Was fehlt im Identifikationsdossier des neuen Mandanten Léman Holding SA?
+A: Erhalten: Handelsregisterauszug, Ausweis des Verwaltungsrats. Fehlen gemäss Ihrer Liste: Erklärung zur wirtschaftlich berechtigten Person, unterzeichnete Vollmacht. Zu prüfen.
+
+demo-mini-engagement
+Q: Bereite das Mandatsschreiben für Léman Holding vor: Vertragsstreit, Honorar nach Aufwand.
+A: Entwurf auf Ihrer Vorlage Prozess erstellt. Die Angaben zum Mandat sind übernommen; den Tarif ergänzen Sie selbst. Zu prüfen.
+
+demo-mini-email
+Q: Ordne die heute Morgen eingegangenen E-Mails zu.
+A: Sieben E-Mails: fünf einem Dossier zugeordnet, zwei ohne klares Dossier, von Ihnen zuzuordnen. Nichts wird ohne Ihre Freigabe verschoben.
+
+demo-mini-deadlines
+Q: Das Urteil Rochat SA wurde am neunten Oktober zweitausendsechsundzwanzig zugestellt. Welche Berufungsfrist?
+A: Nach der von Ihnen festgelegten dreissig-Tage-Regel: Der achte November fällt auf einen Sonntag, vorgeschlagenes Datum Montag, neunter November zweitausendsechsundzwanzig. Zu prüfen: Zustellungsart und Gerichtsferien.
+
+demo-mini-style
+Q: Antworte Rechtsanwalt Favre, der eine Verschiebung der Verhandlung beantragt, im Stil der Kanzlei.
+A: Entwurf nach Ihren üblichen Formulierungen: Anrede, Ton und Signatur. Vor dem Versand zu prüfen.

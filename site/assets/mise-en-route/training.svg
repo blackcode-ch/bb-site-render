@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none">
+ <g stroke="#555950" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M25 177H295M105 32H238V126" stroke="#dad9cf"/>
+  <rect x="126" y="46" width="103" height="66" rx="4" fill="#ebe9df"/>
+  <rect x="132" y="52" width="91" height="53" rx="1" fill="#f7f5ec" stroke="#d5d3c8"/>
+  <path d="M172 112V126M158 126H199"/>
+  <g class="training-result" stroke="#b7ad97">
+   <path d="M144 64H174M144 73H169M144 82H173M144 91H164"/>
+   <path d="M183 64H209M183 73H200"/>
+  </g>
+  <g class="training-check">
+   <circle cx="199" cy="90" r="11" fill="#e7d8c1" stroke="none"/>
+   <path d="M193 90L197 94L205 85" stroke="#96794f" stroke-width="2"/>
+  </g>
+  <path d="M63 141H258L271 151H51Z" fill="#eeede5"/>
+  <path d="M65 151V178M256 151V178"/>
+  <g>
+   <circle cx="81" cy="105" r="11" fill="#f7f5ec"/>
+   <path d="M69 101Q68 89 80 90Q91 91 92 99"/>
+   <path d="M68 120Q78 116 89 122L100 143H64Z" fill="#f7f5ec"/>
+   <path d="M69 143L67 165H88L96 179"/>
+   <path class="training-hand" d="M89 126L109 133L116 115" stroke-width="3"/>
+  </g>
+  <g>
+   <circle cx="243" cy="104" r="11" fill="#f7f5ec"/>
+   <path d="M232 100Q232 86 245 89Q255 90 255 106"/>
+   <path d="M231 120Q243 116 253 123L262 143H223Z" fill="#e9e7dd"/>
+   <path d="M231 128L211 140M253 143L257 168H233L227 179"/>
+  </g>
+  <g>
+   <circle cx="159" cy="142" r="12" fill="#f7f5ec"/>
+   <path d="M147 139Q146 127 159 127Q171 127 171 139"/>
+   <path d="M142 161Q158 151 176 161L180 182H137Z" fill="#f7f5ec"/>
+   <path d="M142 165H175V188H142Z" fill="#eeede5"/>
+  </g>
+  <path d="M196 135L202 131H224L219 135Z" fill="#d8b889" stroke="#96794f"/>
+  <path d="M196 135H219V143H196Z" fill="#c3a375" stroke="#96794f"/>
+  <path d="M219 135L224 131V139L219 143Z" fill="#96794f" stroke="#96794f"/>
+  <g class="training-question" opacity="0">
+   <path d="M74 57H106Q110 57 110 61V77Q110 81 106 81H93L85 88V81H74Q70 81 70 77V61Q70 57 74 57Z" fill="#f7f5ec" stroke="#96794f"/>
+   <path d="M80 69H81M89 69H90M98 69H99" stroke-width="3" stroke="#96794f"/>
+  </g>
+ </g>
+</svg>

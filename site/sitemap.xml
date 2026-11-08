@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://brigittebox.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/"/>
+  </url>
+  <url><loc>https://brigittebox.com/?lang=de</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/"/>
+  </url>
+  <url><loc>https://brigittebox.com/?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/"/>
+  </url>
+  <url><loc>https://brigittebox.com/cas-usage/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/cas-usage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/cas-usage/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/cas-usage/"/>
+  </url>
+  <url><loc>https://brigittebox.com/cas-usage/?lang=de</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/cas-usage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/cas-usage/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/cas-usage/"/>
+  </url>
+  <url><loc>https://brigittebox.com/technologie/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/technologie/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/technologie/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/technologie/"/>
+  </url>
+  <url><loc>https://brigittebox.com/technologie/?lang=de</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/technologie/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/technologie/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/technologie/"/>
+  </url>
+  <url><loc>https://brigittebox.com/demo/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/demo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/demo/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/demo/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/demo/"/>
+  </url>
+  <url><loc>https://brigittebox.com/demo/?lang=de</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/demo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/demo/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/demo/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/demo/"/>
+  </url>
+  <url><loc>https://brigittebox.com/demo/?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/demo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/demo/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/demo/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/demo/"/>
+  </url>
+  <url><loc>https://brigittebox.com/sur-mesure/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/sur-mesure/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/sur-mesure/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/sur-mesure/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/sur-mesure/"/>
+  </url>
+  <url><loc>https://brigittebox.com/sur-mesure/?lang=de</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/sur-mesure/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/sur-mesure/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/sur-mesure/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/sur-mesure/"/>
+  </url>
+  <url><loc>https://brigittebox.com/sur-mesure/?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/sur-mesure/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/sur-mesure/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/sur-mesure/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/sur-mesure/"/>
+  </url>
+  <url><loc>https://brigittebox.com/confidentialite/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/confidentialite/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/confidentialite/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/confidentialite/"/>
+  </url>
+  <url><loc>https://brigittebox.com/confidentialite/?lang=de</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/confidentialite/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/confidentialite/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/confidentialite/"/>
+  </url>
+  <url><loc>https://brigittebox.com/confidentialite/?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://brigittebox.com/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://brigittebox.com/confidentialite/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brigittebox.com/confidentialite/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brigittebox.com/confidentialite/"/>
+  </url>
+<url><loc>https://brigittebox.com/videos/</loc></url><url><loc>https://brigittebox.com/videos/?lang=de</loc></url><url><loc>https://brigittebox.com/videos/?lang=en</loc></url>  <url><loc>https://brigittebox.com/comprendre-ia/</loc></url>
+  <url><loc>https://brigittebox.com/en/understanding-ai/</loc></url>
+  <url><loc>https://brigittebox.com/comprendre-ia/sources/</loc></url>
+</urlset>

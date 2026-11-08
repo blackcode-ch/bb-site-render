@@ -1,0 +1,24 @@
+/* Scoped hero-only presentation. Existing menu and page styles stay untouched. */
+#hero-box{background:var(--paper,#f6f5f1);color:var(--ink,#222320);border:1px solid var(--line,#d9d8d0);box-shadow:none}
+#hero-box figcaption{color:var(--ink,#222320);border-color:var(--line,#d9d8d0)}
+#hero-box .illustrative{color:var(--muted,#62635d)}
+#hero-box .box-3d{flex:0 0 auto;height:clamp(410px,34vw,470px);min-height:410px;isolation:isolate;outline-offset:3px}
+#hero-box .box-canvas{height:100%;touch-action:pan-y;cursor:grab}
+#hero-box .box-canvas[data-dragging]{cursor:grabbing}
+#hero-box .box-hint{position:absolute;bottom:1px;left:0;right:0;text-align:center;font:10px/1.4 Arial,sans-serif;letter-spacing:.04em;color:var(--muted,#62635d);pointer-events:none}
+#hero-box .box-callout{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+#hero-box .box-leader{position:absolute;width:100%;height:100%;overflow:visible}
+#hero-box .box-leader polyline{stroke:#9b3431;stroke-width:1;stroke-opacity:.7;fill:none}
+#hero-box .box-leader circle{fill:#bb2c2c;stroke:#fffefa;stroke-width:1}
+#hero-box .box-label{position:absolute;top:0;left:0;padding:2px 0 2px 7px;background:transparent;border-left:1px solid var(--red,#bb2c2c);color:var(--ink,#222320);font:12px/1.4 Arial,sans-serif;box-shadow:none}
+#hero-box .box-pause{display:grid;place-items:center;padding:0;width:44px;height:44px;min-height:44px;border:0;background:transparent;color:var(--ink,#222320)}
+#hero-box .box-pause[hidden]{display:none}
+#hero-box .box-pause svg{width:20px;height:20px}
+#hero-box .box-pause:hover{background:var(--tint,#eeede7)}
+#hero-box .box-pause:focus-visible,#hero-box .box-3d:focus-visible{outline:2px solid #bb2c2c;outline-offset:3px}
+#hero-box .box-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+#hero-box .box-static-legend{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;padding:0 0 18px;margin:0;list-style:none;color:var(--ink,#222320);font:12px/1.4 Arial,sans-serif}
+#hero-box .box-static-legend[hidden]{display:none}
+@media(max-width:380px){#hero-box .box-static-legend{grid-template-columns:1fr}}
+@media(max-width:600px){#hero-box .box-3d{height:320px;min-height:320px}#hero-box .box-label{font-size:11px}#hero-box .box-hint{font-size:9px}}
+@media(prefers-reduced-motion:reduce){#hero-box .box-3d{height:auto;min-height:0}}

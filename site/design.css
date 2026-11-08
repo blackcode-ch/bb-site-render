@@ -1,0 +1,127 @@
+﻿/* Brigitte: Andrea's approved box identity and existing product photography. */
+:root{--paper:#f6f5f1;--ink:#222320;--muted:#62635d;--red:#bd282d;--red-h:#a82227;--line:#d9d8d0;--surface:#fdfcf9;--tint:#eeede7;--metal:#d8b889;--band:#242823;--band-fg:#f2f1eb;--band-muted:#c3c5ba;--photo:#efeee8;--shadow:0 24px 60px -40px #28241c55}
+:root[data-theme="dark"]{--paper:#191b1a;--ink:#f2f1eb;--muted:#b5b7ae;--red:#ee7776;--red-h:#f58a89;--line:#3c403a;--surface:#202320;--tint:#242823;--band:#111410;--photo:#eeede5;--shadow:none}
+html{scroll-behavior:smooth;scroll-padding-top:2rem}
+body{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+button,a{-webkit-tap-highlight-color:transparent}
+button:focus-visible,a:focus-visible{outline:2px solid var(--red);outline-offset:5px}
+::selection{background:var(--red);color:var(--paper)}
+.w{width:100%;max-width:1320px;padding-inline:clamp(22px,4.2vw,64px)}
+.mast{min-height:116px;padding:23px 0;gap:24px}
+.brand{display:inline-flex;text-decoration:none;color:var(--ink)}
+.brand .brigitte-identity{font-size:37px;--brand-accent:var(--red)}
+.tools{gap:2px}.tools button{display:grid;place-items:center;min-width:40px;min-height:40px;padding:0 9px;border:0;border-radius:3px;font-size:11px;font-weight:600;letter-spacing:.03em;color:var(--muted)}
+.tools button:hover{background:var(--tint)}.tools button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.tools #theme{margin-left:12px;border-left:1px solid var(--line);border-radius:0;font-size:20px;font-weight:400}
+.hero{grid-template-columns:1.12fr 1fr;column-gap:clamp(30px,5vw,72px);row-gap:0;padding:76px 0 72px}
+.hero>div{min-width:0}.eyebrow,.tag{display:flex;align-items:center;gap:12px;font-size:10px;font-weight:600;line-height:1.6;letter-spacing:.16em;margin:0 0 25px}
+.eyebrow::before,.tag::before{content:"";width:20px;height:1px;background:currentColor;flex:none}
+h1{font-weight:400;font-size:clamp(37px,4.3vw,62px);line-height:1.04;letter-spacing:-.055em;max-width:17ch;margin:0;text-wrap:balance}
+h1 em{color:var(--ink)}
+.lede{font-family:Arial,Helvetica,sans-serif;max-width:44ch;font-size:16px;line-height:1.8;margin:26px 0 0}
+.actions{display:grid;justify-items:start;gap:13px;margin-top:30px}
+.cta{min-height:56px;padding:15px 23px;border-radius:2px;font-size:14px;line-height:1.5;font-weight:600;gap:20px;color:var(--paper);box-shadow:none;transition:background .18s,transform .18s}
+.cta:hover{transform:translateY(-2px)}.cta .arr{font-size:19px;line-height:1}
+.fine{font-size:11px;line-height:1.7;color:var(--muted)}
+.hero-visual{position:relative;align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;min-height:440px;background:var(--photo);color:#262923;border:1px solid #d9d8cf;margin:0;padding:27px;box-shadow:var(--shadow);overflow:hidden}
+.visual-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.visual-top .micro-mark{width:23px;height:25px;border:1px solid #292c27;border-left:5px solid #bd282d;position:relative}.micro-mark::after{content:"";position:absolute;right:4px;top:11px;width:3px;height:3px;background:#292c27}
+.box-photo{display:block;width:100%;height:auto;mix-blend-mode:multiply;object-fit:contain;margin:32px auto 25px}
+.hero-visual figcaption{display:flex;justify-content:space-between;gap:15px;align-items:end;padding-top:18px;border-top:1px solid #cecec3;font-size:11px;line-height:1.6}
+.hero-badge{grid-column:2;align-self:start;margin-top:24px;display:flex;align-items:center;gap:16px}.hero-badge img{width:140px;height:auto;display:block;flex:none}.hero-badge span{flex:1;font-size:13px;color:var(--muted);line-height:1.5}
+.hero-visual figcaption strong{display:block;font-size:18px;font-weight:500;letter-spacing:-.02em}.visual-caption-note{max-width:17ch;text-align:right;color:#606257}
+.rule{border-top:1px solid var(--line);padding:22px 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:.06em;gap:16px 24px}.rule span::before{margin-right:7px;font-size:14px}
+section.blk{padding:76px 0}.tag{margin-bottom:20px}h2{font-weight:400;font-size:clamp(32px,3.5vw,48px);line-height:1.1;letter-spacing:-.045em;max-width:24ch;margin-bottom:23px;text-wrap:balance}
+.sublede{font-family:Arial,Helvetica,sans-serif;font-size:19px;line-height:1.65;max-width:57ch}
+.cards{margin-top:38px;border-top:1px solid var(--line)}.card{padding:28px 28px 0 0}.card+.card{padding-left:28px}.num{font:11px/1.4 Consolas,monospace;letter-spacing:.03em}.card h3{font-size:23px;font-weight:500;line-height:1.25;letter-spacing:-.03em;max-width:22ch;margin:20px 0 14px}.card p{font-size:14px;line-height:1.8}.card .out{font-size:14px;border-top:1px solid var(--line);padding-top:17px;margin-top:23px}
+.band .in{grid-template-columns:.8fr 1.2fr;gap:8%;padding-block:72px}.band .art{max-width:340px;margin:auto}.band blockquote{font-size:clamp(28px,2.9vw,40px);font-weight:400;line-height:1.2;letter-spacing:-.035em}.band ul{margin-top:31px;gap:0 25px}.band li{font-size:12px;line-height:1.75;padding:16px 0}.band li strong{font-weight:500;font-size:14px;margin-bottom:5px}
+.steps{gap:0;margin-top:36px;counter-reset:step}.step{position:relative;background:none;border:0;border-top:1px solid var(--line);padding:27px 29px 0 0}.step+.step{padding-left:29px}.step .num{display:grid;place-items:center;position:relative;width:32px;height:32px;border:1px solid var(--line);background:var(--paper);margin-top:-44px}.step h3{font-size:22px;line-height:1.3;letter-spacing:-.03em;font-weight:500;margin:24px 0 13px}.step p{font-size:14px;line-height:1.8}
+.final{max-width:none;margin:0;padding:70px 0 76px;border-top:1px solid var(--line);grid-template-columns:1.2fr 1fr;gap:7%;text-align:left}.final h2{font-size:clamp(34px,3.5vw,49px);max-width:21ch;font-weight:400;margin:0}.final .box{justify-self:end;gap:17px}.mail{font-size:12px;text-underline-offset:4px}.final .fine{max-width:40ch}
+footer{padding:25px 0 31px;gap:18px;font-size:10px;line-height:1.8;letter-spacing:0}footer>span:first-child{max-width:90ch}footer a{text-underline-offset:4px}
+.pulse{animation:none}
+@media(min-width:1441px){.hero{padding-block:92px}.hero-visual{min-height:470px}}
+@media(max-width:1000px) and (min-width:761px){.hero{grid-template-columns:1.12fr 1fr;column-gap:30px;row-gap:0;padding-block:55px}h1{font-size:clamp(39px,5.2vw,52px)}.hero-visual{min-height:390px;padding:22px}.cards{grid-template-columns:repeat(3,minmax(0,1fr))}.card,.card+.card{padding:25px 20px;border-bottom:0;border-right:1px solid var(--line)}.card:first-child{padding-left:0}.card:last-child{padding-right:0;border-right:0}.card h3{font-size:21px}.steps{grid-template-columns:repeat(3,minmax(0,1fr))}.step,.step+.step{padding-right:20px;padding-left:20px}.step:first-child{padding-left:0}.final{grid-template-columns:1.2fr 1fr}}
+@media(max-width:760px){.mast{min-height:95px;padding-block:21px;gap:16px}.brand .brigitte-identity{font-size:31px}.hero{grid-template-columns:1fr;padding:42px 0 35px;gap:34px}.hero>div{max-width:590px}h1{font-size:clamp(40px,7.5vw,57px);max-width:19ch}.eyebrow,.tag{font-size:9px;margin-bottom:21px}.lede{font-size:15px;margin-top:23px}.actions{margin-top:24px}.cta{min-height:55px}.hero-visual{min-height:0;padding:23px}.hero-badge{grid-column:auto}.box-photo{width:min(90%,440px);margin:25px auto 29px}.hero-visual figcaption strong{font-size:17px}.rule{display:grid;grid-template-columns:1fr 1fr;gap:15px 16px;font-size:9px;line-height:1.7}.rule span{display:flex;align-items:baseline}.rule span::before{margin-right:4px}.cards{grid-template-columns:1fr;margin-top:30px}.card,.card+.card{padding:24px 0 26px;border-right:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:29px 1fr;column-gap:15px}.card:last-child{border-bottom:0;padding-bottom:0}.card .num{grid-row:1 / 4;margin-top:4px}.card h3{max-width:none;font-size:23px;margin:0 0 12px}.card p{max-width:55ch;font-size:14px}.card .out{font-size:14px;padding-top:13px;margin-top:15px}section.blk{padding:49px 0}h2{font-size:34px;margin-bottom:19px}.sublede{font-size:18px}.band .in{grid-template-columns:1fr;padding-block:41px;gap:29px}.band .art{max-width:205px}.band blockquote{font-size:30px}.band ul{grid-template-columns:1fr 1fr;gap:0 20px}.band li{font-size:12px}.band li strong{font-size:14px}.steps{grid-template-columns:1fr;margin-top:28px;gap:0}.step,.step+.step{display:grid;grid-template-columns:32px 1fr;gap:0 18px;padding:24px 0;border-top:1px solid var(--line)}.step:last-child{padding-bottom:0}.step .num{grid-row:1 / 3;margin:0;width:31px;height:31px}.step h3{font-size:22px;margin:1px 0 10px}.step p{font-size:14px}.final{grid-template-columns:1fr;padding:49px 0;gap:27px}.final h2{font-size:36px;max-width:23ch}.final .box{justify-self:start;gap:15px}.final .cta{width:auto}.mail{font-size:12px}footer{padding-bottom:25px;gap:13px}}
+@media(max-width:380px){.w{padding-inline:20px}.mast{gap:8px}.brand .brigitte-identity{font-size:27px}.tools button{min-width:32px;padding:0 6px;font-size:10px}.tools #theme{margin-left:3px;min-width:30px}h1{font-size:38px}.hero .cta,.final .cta{width:100%;padding-inline:12px;font-size:13px;gap:12px}.hero-visual{padding:18px}.hero-visual figcaption{font-size:10px}.hero-visual figcaption strong{font-size:15px}.visual-caption-note{max-width:15ch}.band blockquote{font-size:27px}.band li strong{font-size:13px}.final .box{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta{transition:none}.cta:hover{transform:none}}
+.band .in{padding-inline:clamp(22px,4.2vw,64px)} @media(max-width:380px){.band .in{padding-inline:20px}}
+
+/* Inception membership section; official badge pending. */
+.inception{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(240px,.75fr);column-gap:clamp(35px,7vw,100px);border-bottom:1px solid var(--line)}
+.inception>.tag{grid-column:1;grid-row:1}
+.inception>h2{grid-column:1;grid-row:2;max-width:25ch}
+.inception>.sublede{grid-column:1;grid-row:3;max-width:51ch;font-size:18px}
+.inc-points{grid-column:1 / -1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:40px;border-top:1px solid var(--line)}
+.inc-point{min-width:0;padding:26px 28px 0 0}
+.inc-point+.inc-point{padding-left:28px;border-left:1px solid var(--line)}
+.inc-point h3{font-size:22px;line-height:1.3;letter-spacing:-.03em;font-weight:500;max-width:24ch;margin:18px 0 12px}
+.inc-point p{font-size:14px;line-height:1.8;color:var(--muted);margin:0}
+@media(max-width:760px){
+ .inception{grid-template-columns:minmax(0,1fr);column-gap:0}
+ .inception>.tag,.inception>h2,.inception>.sublede{grid-column:1}
+ .inception>.sublede{font-size:18px}
+ .inc-points{grid-column:1;grid-row:5;grid-template-columns:minmax(0,1fr);margin-top:28px}
+ .inc-point,.inc-point+.inc-point{display:grid;grid-template-columns:29px minmax(0,1fr);gap:0 15px;padding:24px 0;border-left:0;border-bottom:1px solid var(--line)}
+ .inc-point:last-child{border-bottom:0;padding-bottom:0}
+ .inc-point .num{grid-row:1 / 3;margin-top:4px}
+ .inc-point h3{font-size:22px;max-width:none;margin:0 0 12px}
+ .inc-point p{font-size:14px}
+}
+/* 3D hero (bb-launch): canvas and still share the same box */
+.box-3d{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:300px}
+.box-3d .box-photo{mix-blend-mode:normal;max-width:520px}
+.box-canvas{display:block;width:100%;height:380px}
+@media(max-width:760px){.box-3d{min-height:0}}
+.box-3d [hidden]{display:none!important}
+
+/* Review 4: readable small text, comfortable controls, no empty badge slot. */
+.tools button,.tools #theme{min-width:44px;min-height:44px;flex-shrink:0}
+.fine,footer,.mail{font-size:13px}
+.inc-note{grid-column:1 / -1;font-size:13px;margin-top:26px;max-width:80ch}
+.inception{grid-template-columns:minmax(0,1fr)}
+.inception>h2{max-width:30ch}
+.inception>.sublede{max-width:70ch}
+.inc-points{grid-row:4}
+.visual-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 17px;color:#606257;min-height:22px}
+.illustrative{font-size:12px;line-height:1.6}
+.motion-toggle{font:12px/1.4 Arial,Helvetica,sans-serif;min-height:44px;padding:8px 12px;border:1px solid #999b91;border-radius:2px;background:transparent;color:#262923;cursor:pointer}
+.motion-toggle:hover{background:#deded4}
+.motion-toggle[hidden]{display:none}
+/* Clara v3: original spacing and identity, concise equal cards throughout. */
+.function-grid{gap:14px;border:0;grid-auto-rows:1fr}
+.function-grid .card,.function-grid .card+.card{display:flex;align-items:center;padding:25px;border:1px solid var(--line);background:var(--surface);min-height:112px}
+.function-grid .card h3{font-size:21px;line-height:1.3;margin:0;max-width:none;font-weight:500}
+.privacy-inner{padding-block:38px}
+.privacy .tag{font-size:11px;max-width:none;margin:0 0 14px}
+.privacy p{font-size:17px;line-height:1.75;margin:0;max-width:110ch;color:var(--band-fg)}
+.inception{display:block}
+.inception h2{font-size:clamp(28px,3vw,40px);max-width:32ch;margin-bottom:17px}
+.inception .sublede{font:17px/1.7 Arial,Helvetica,sans-serif;max-width:none}
+.inception .inc-note{margin:12px 0 0;font-size:12px}
+.badge-surface{float:right;width:280px;max-width:100%;margin:0 0 24px 40px;padding:32px;background:#fff;border:1px solid #dedede;border-radius:10px}
+.official-badge{display:block;width:100%;height:auto;object-fit:contain;margin:0;float:none;filter:none;mix-blend-mode:normal}
+.official-badge[hidden]{display:none}
+.support-grid{clear:both;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:32px}
+.support-grid>div{display:flex;align-items:center;justify-content:center;min-height:86px;padding:22px;border:1px solid var(--line);background:var(--surface);font-size:18px;line-height:1.35;text-align:center}
+.call-contact{display:grid;gap:4px}.call-contact a{text-underline-offset:4px}
+.hero-visual figcaption strong{font-size:16px;line-height:1.4;max-width:24ch}
+.visual-caption-note{flex:0 0 28%}
+.rule{font-size:10px;letter-spacing:.06em}
+@media(max-width:760px){
+ .function-grid{grid-auto-rows:1fr;gap:10px;margin-top:27px}
+ .function-grid .card,.function-grid .card+.card{padding:22px;min-height:78px}
+ .function-grid .card h3{font-size:20px}
+ .privacy-inner{padding-block:31px}.privacy p{font-size:15px}
+ .support-grid{grid-template-columns:1fr;gap:10px;margin-top:25px;grid-auto-rows:1fr}
+ .support-grid>div{min-height:72px;font-size:18px;padding:20px}
+ .badge-surface{float:none;margin:0 0 25px}
+ .inception .sublede{font-size:16px}.hero-visual figcaption strong{font-size:15px}
+}
+@media(max-width:380px){.mast{flex-wrap:wrap;row-gap:16px}.mast .tools{margin-left:auto}.tools #theme{margin-left:6px}.fine,footer,.mail{font-size:12px}.inc-note{font-size:13px}}
+
+/* illus-2210: fine line-art illustrations (direction A) */
+.illus{width:100%;max-width:420px;margin:26px 0 0;display:block}
+.illus svg{width:100%;height:auto;display:block;max-width:100%}
+.illus-different,.illus-chrono{max-width:460px}
+@media(max-width:760px){.illus{max-width:320px;margin-top:20px}}
+@media(max-width:380px){.illus{max-width:280px}}

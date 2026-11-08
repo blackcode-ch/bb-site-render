@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+ref=${1:?Usage: load-site.sh <ref>}
+source_repo=${SITE_SOURCE_REPO:-/c/Users/Andrew/Documents/brigitte-meeting/worktrees/site-fix-coord}
+stage=$(mktemp -d)
+trap 'rm -rf "$stage"' EXIT
+git -C "$source_repo" archive "$ref" monday-launch/site | tar -xf - -C "$stage"
+python - "$stage/monday-launch/site" <<'PY'
+import pathlib, shutil, sys, re
+root = pathlib.Path(sys.argv[1])
+shutil.rmtree(root / 'investisseurs', ignore_errors=True)
+patterns = ['middleware.js','vercel.json','i18n-*-investors.js','*.md','.env*','*.test.mjs','verify*.mjs','*verification*','*.log']
+for pattern in patterns:
+    for path in root.rglob(pattern):
+        if path.is_file(): path.unlink()
+secret = re.compile(rb'INVESTOR_CODE|INVESTOR_COOKIE_KEY|-----BEGIN (?:[A-Z ]*PRIVATE KEY)|gh[pousr]_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}')
+for path in root.rglob('*'):
+    if path.is_file() and secret.search(path.read_bytes()):
+        raise SystemExit('Possible secret detected in ' + str(path.relative_to(root)))
+target = pathlib.Path.cwd() / 'site'
+if target.exists(): shutil.rmtree(target)
+shutil.copytree(root, target)
+PY
+git -C "$source_repo" rev-parse "$ref" > source-ref.txt
+echo "Loaded sanitized site at $(cat source-ref.txt)"

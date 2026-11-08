@@ -1,0 +1,11 @@
+.contact-team { margin-block: 2rem; }
+.contact-team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1rem; }
+.contact-team-grid article { border: 1px solid var(--line, currentColor); border-radius: 0; padding: 1.25rem; }
+.contact-team-grid h4 { font-size: 1.2rem; margin: 0; }
+.contact-team-grid p { margin: .4rem 0 1rem; }
+[data-address-copy], .summary-copy, .contact-email button { font: inherit; color: inherit; background: transparent; border: 1px solid currentColor; border-radius: 0; padding: .4rem .65rem; cursor: pointer; }
+.contact-copy-status { display: inline-block; margin-inline-start: .5rem; }
+[data-contact-address] { overflow-wrap: anywhere; }
+.contact-email { margin-top: .75rem; font-size: .9rem; overflow-wrap: anywhere; }
+.contact-email button { margin-inline-start: .5rem; font-size: .85rem; padding: .3rem .55rem; }
+.proposal textarea { display: block; width: 100%; margin-block: .75rem; }

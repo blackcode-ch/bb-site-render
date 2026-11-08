@@ -1,0 +1,37 @@
+Exakter Text, der zur Generierung der DE-Clips an bb-text-gem gesendet wurde (Frage + Antwort zusammen gelesen, natürliche Pause dazwischen). Die <strong>-Tags aus dem Quelltext wurden vor dem Versand entfernt -- normal betont vorgelesen, nichts Besonderes.
+
+demo-main-turn1
+Q: Schreib eine E-Mail an Frau Rochat und bitte um die Bauabrechnung und das Abnahmeprotokoll.
+A: Hier ein Entwurf. Bitte prüfen Sie ihn, ich sende ihn erst nach Ihrer Freigabe.
+
+demo-main-turn2
+Q: Gib mir die Chronologie des Dossiers.
+A: Hier ist sie, jedes Datum verweist auf sein Dokument. Ein Punkt zu prüfen: zwei Daten für das Bauende.
+
+demo-main-turn3
+Q: Und bereite die Zeiterfassung des Monats vor.
+A: Drei vorgeschlagene Einträge, Dauer zu prüfen.
+
+demo-mini-conflicts
+Q: Neues Mandat: Valmont Immobilier SA gegen Garage Duvoisin Sàrl. Gibt es einen Konflikt?
+A: Zwei Treffer zur Prüfung: Valmont Immobilier ist Gegenpartei im Dossier Rochat SA (laufend); ein Gesellschafter der Garage Duvoisin erscheint in einem 2021 abgeschlossenen Dossier. Zu prüfen, bevor Sie das Mandat annehmen.
+
+demo-mini-identity
+Q: Was fehlt im Identifikationsdossier des neuen Mandanten Léman Holding SA?
+A: Erhalten: Handelsregisterauszug, Ausweis des Verwaltungsrats. Fehlen gemäss Ihrer Liste: Erklärung zur wirtschaftlich berechtigten Person, unterzeichnete Vollmacht. Zu prüfen.
+
+demo-mini-engagement
+Q: Bereite das Mandatsschreiben für Léman Holding vor: Vertragsstreit, Honorar nach Aufwand.
+A: Entwurf auf Ihrer Vorlage «Prozess» erstellt. Die Angaben zum Mandat sind übernommen; den Tarif ergänzen Sie selbst. Zu prüfen.
+
+demo-mini-email
+Q: Ordne die heute Morgen eingegangenen E-Mails zu.
+A: Sieben E-Mails: fünf einem Dossier zugeordnet (Vorschlag), zwei ohne klares Dossier, von Ihnen zuzuordnen. Nichts wird ohne Ihre Freigabe verschoben.
+
+demo-mini-deadlines
+Q: Das Urteil Rochat SA wurde am 9.10.2026 zugestellt. Welche Berufungsfrist?
+A: Nach der von Ihnen festgelegten 30-Tage-Regel: Der 8.11.2026 fällt auf einen Sonntag, vorgeschlagenes Datum Montag, 9.11.2026. Zu prüfen (Zustellungsart, Gerichtsferien).
+
+demo-mini-style
+Q: Antworte Rechtsanwalt Favre, der eine Verschiebung der Verhandlung beantragt, im Stil der Kanzlei.
+A: Entwurf nach Ihren üblichen Formulierungen (Anrede, Ton, Signatur). Vor dem Versand zu prüfen.
