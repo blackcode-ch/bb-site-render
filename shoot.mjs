@@ -5,17 +5,19 @@ import { mkdir, writeFile, readFile } from 'node:fs/promises';
 if (process.platform === 'win32') throw new Error('Rendering is restricted to GitHub Actions; no Windows browser.');
 const pages = ['/', '/?lang=en', '/?lang=de', '/comprendre-ia/', '/en/understanding-ai/', '/comprendre-ia/sources/', '/technologie/', '/sur-mesure/', '/cas-usage/', '/justitia/', '/demo/', '/videos/', '/confidentialite/'];
 const sizes = [{width:390,height:844,isMobile:true,hasTouch:true},{width:1440,height:900,isMobile:false,hasTouch:false}];
-const origin = 'http://127.0.0.1:8765';
-const server = spawn('python3', ['-m','http.server','8765','--bind','127.0.0.1','--directory','site'], {stdio:'ignore'});
+const baseUrl = process.env.BASE_URL?.trim();
+const origin = baseUrl ? new URL(baseUrl).href.replace(/\/$/, '') : 'http://127.0.0.1:8765';
+if (!['http:', 'https:'].includes(new URL(origin).protocol)) throw new Error('BASE_URL must use HTTP or HTTPS.');
+const server = baseUrl ? undefined : spawn('python3', ['-m','http.server','8765','--bind','127.0.0.1','--directory','site'], {stdio:'ignore'});
 let browser;
-const report = {sourceRef:(await readFile('source-ref.txt','utf8')).trim(), results:[]};
+const report = {mode:baseUrl?'live':'local', baseUrl:origin, sourceRef:baseUrl?origin:(await readFile('source-ref.txt','utf8')).trim(), results:[]};
+await mkdir('out',{recursive:true});
 try {
-  for (let i=0;i<100;i++) {
+  if (!baseUrl) for (let i=0;i<100;i++) {
     try {if ((await fetch(origin)).ok) break;} catch {}
     if (i===99) throw new Error('Static server did not start');
     await new Promise(resolve=>setTimeout(resolve,100));
   }
-  await mkdir('out',{recursive:true});
   browser = await chromium.launch({headless:true});
   for (const size of sizes) for (const path of pages) {
     const context = await browser.newContext({viewport:{width:size.width,height:size.height},isMobile:size.isMobile,hasTouch:size.hasTouch,deviceScaleFactor:1});
@@ -46,7 +48,7 @@ try {
   const escape = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   await writeFile('out/index.html',`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Render review</title><style>body{font:16px system-ui;margin:24px;background:#eee}section{margin:32px 0}img{display:block;max-width:100%;height:auto}summary{cursor:pointer;padding:12px;background:white}pre{white-space:pre-wrap}</style><h1>Render review</h1><p>Source: ${escape(report.sourceRef)}</p>${report.results.map(r=>`<section><h2>${escape(r.path)} · ${r.width}px</h2><details><summary>Diagnostics</summary><pre>${escape(JSON.stringify(r,null,2))}</pre></details>${r.screenshot?`<a href="${r.screenshot}"><img loading="lazy" src="${r.screenshot}" alt="${escape(r.path)} at ${r.width}px"></a>`:''}</section>`).join('')}`);
   await browser?.close();
-  server.kill();
+  server?.kill();
 }
 const issues = report.results.filter(r => r.overflow > 0 || r.consoleErrors.length || r.pageErrors.length || r.failedRequests.length || r.httpErrors.length || r.missingImages?.length);
 console.log(`Captured ${report.results.filter(r=>r.screenshot).length}/${pages.length*sizes.length} views; ${issues.length} views with issues. Review out/index.html and out/report.json.`);
