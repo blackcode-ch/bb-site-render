@@ -52,7 +52,7 @@
  }
  function render(){
   const u=copy[lang];document.documentElement.lang=lang;document.title=u.title+' · Brigitte';document.querySelector('meta[name="description"]').content=u.intro;
-  for(const [selector,text] of [['.skip',u.skip],['.menu-toggle span:last-child',u.menu],['footer [data-i="pub"]',u.publisher],['footer [data-i="ch"]',u.country],['footer [data-i="ide"]',u.uid],['footer [data-i="vat"]',u.tax],['footer [data-i="vatNumber"]','CHE-114.555.500 '+u.tax],['footer [data-i="since2008"]',u.since2008]])document.querySelector(selector).textContent=text;
+  for(const [selector,text] of [['.skip',u.skip],['.menu-toggle span:last-child',u.menu],['footer [data-i="pub"]',u.publisher],['footer [data-i="ch"]',u.country],['footer [data-i="vatNumber"]','IDE/TVA CHE-114.555.500 TVA'],['footer [data-i="since2008"]',u.since2008]])document.querySelector(selector).textContent=text;
   const creator=document.querySelector('.creator-links > span');creator.firstChild.textContent=u.created;
   document.querySelectorAll('.primary-nav,.footer-nav').forEach(nav=>{nav.setAttribute('aria-label',nav.classList.contains('primary-nav')?u.navigation:u.footerNavigation);nav.querySelectorAll('a').forEach((a,i)=>{if(a.hasAttribute("data-nav-booking")||a.hasAttribute("data-footer-tailored")||a.hasAttribute("data-footer-film"))return;const label=u.nav[Number(a.dataset.navIndex??i)];if(label)a.textContent=label;});});
   document.querySelector('.tools').setAttribute('aria-label',u.language);document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));

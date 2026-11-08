@@ -44,7 +44,7 @@
   "Suisse": "Switzerland",
   "IDE": "UID",
   "TVA": "VAT",
-  "CHE-114.555.500 TVA": "CHE-114.555.500 VAT",
+  "IDE/TVA CHE-114.555.500 TVA": "IDE/TVA CHE-114.555.500 TVA",
   "Retour à l’accueil": "Back to home",
   "Pour la sécurité": "For security",
   "Pour la gestion de fortune": "For wealth management",
