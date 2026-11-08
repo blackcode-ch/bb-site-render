@@ -1,0 +1,34 @@
+/* Inner pages, one solid column (redesign, 6 Nov 2026). Layout only; text, scripts and markup unchanged.
+   Scope: main.subpage.c-col. Rhythm 64px (phone) / 112px (desktop). One column everywhere;
+   the only multi-column pattern is a 3-column row for card grids from 900px. Colours: live variables. */
+main.c-col{--sec:64px;width:min(1200px,calc(100% - 48px));max-width:none;margin-inline:auto;padding-block:var(--sec) 0;font-family:Arial,Helvetica,sans-serif;overflow-x:clip}
+main.c-col *{min-width:0}
+main.c-col img,main.c-col svg,main.c-col video,main.c-col iframe,main.c-col canvas{max-width:100%}
+main.c-col img{height:auto}
+main.c-col .tag{margin:0 0 24px}
+main.c-col .page-intro{display:block;padding:0 0 var(--sec);border:0;background:none}
+main.c-col .page-intro>*+*{margin-top:24px}
+main.c-col h1{font-size:clamp(40px,5.1vw,72px);line-height:1.05;font-weight:400;letter-spacing:-.045em;max-width:18ch;text-wrap:balance;margin:0}
+main.c-col h2{font-size:clamp(30px,3.2vw,46px);line-height:1.12;font-weight:400;letter-spacing:-.04em;max-width:24ch;text-wrap:balance;margin:0 0 24px}
+main.c-col h3{font-size:24px;line-height:1.2;font-weight:400;letter-spacing:-.025em}
+main.c-col .lead,main.c-col .section-intro{max-width:44ch}
+main.c-col .content-section,main.c-col .film-section,main.c-col .blk,main.c-col .box-figures{display:block;padding:var(--sec) 0;margin:0;border:0;border-top:1px solid var(--line);background:none;box-shadow:none}
+main.c-col .content-prose,main.c-col .content-section>p,main.c-col .content-section>ul,main.c-col .content-section>ol{max-width:68ch}
+main.c-col .content-section>*+*{margin-top:16px}
+main.c-col .content-grid,main.c-col .figures-columns,main.c-col .gpu-stack,main.c-col .journey,main.c-col .method-labels,main.c-col .topic-links{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:32px}
+main.c-col .topic-links{gap:0 24px;margin-top:0}
+main.c-col .content-card,main.c-col .featured-case-card,main.c-col .gpu-card{border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none;background:none;padding:24px 0 0}
+main.c-col .illus,main.c-col .illus-cadre,main.c-col .illus-chrono{width:100%;max-width:440px;margin:32px 0 0}
+main.c-col .cta,main.c-col button,main.c-col .jc-submit{min-height:48px}
+main.c-col .text-link,main.c-col .topic-links a,main.c-col .page-next a,main.c-col summary{display:inline-flex;align-items:center;min-height:44px}
+main.c-col .page-next{display:flex;flex-wrap:wrap;gap:8px 24px;padding:var(--sec) 0}
+main.c-col .hero-badge{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+main.c-col table{display:block;max-width:100%;overflow-x:auto}
+@media(min-width:900px){
+ main.c-col{--sec:112px}
+ main.c-col .content-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+ main.c-col .topic-links{display:flex;flex-wrap:wrap}
+}
+@media(max-width:420px){main.c-col .cta{width:100%;justify-content:center}}
+/* Keep every replay choice visible in the mobile demo. */
+@media(max-width:760px){main.c-col .replay-chips{display:grid;grid-template-columns:minmax(0,1fr);overflow:visible}main.c-col .replay-chips button{white-space:normal;text-align:left}}

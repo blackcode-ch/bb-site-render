@@ -43,6 +43,8 @@ try {
   }
 } finally {
   await writeFile('out/report.json',JSON.stringify(report,null,2));
+  const escape = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  await writeFile('out/index.html',`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Render review</title><style>body{font:16px system-ui;margin:24px;background:#eee}section{margin:32px 0}img{display:block;max-width:100%;height:auto}summary{cursor:pointer;padding:12px;background:white}pre{white-space:pre-wrap}</style><h1>Render review</h1><p>Source: ${escape(report.sourceRef)}</p>${report.results.map(r=>`<section><h2>${escape(r.path)} · ${r.width}px</h2><details><summary>Diagnostics</summary><pre>${escape(JSON.stringify(r,null,2))}</pre></details>${r.screenshot?`<a href="${r.screenshot}"><img loading="lazy" src="${r.screenshot}" alt="${escape(r.path)} at ${r.width}px"></a>`:''}</section>`).join('')}`);
   await browser?.close();
   server.kill();
 }

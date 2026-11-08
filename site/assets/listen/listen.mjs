@@ -51,7 +51,7 @@ if (hosts.length) {
     const l = lang();
     const url = `${new URL(`${entry.slug}-${l}.m4a`, import.meta.url).href}?v=${CACHE_V}`;
     let available = true;
-    try { const res = await fetch(url, { method: 'HEAD' }); available = res.ok; }
+    try { const res = await fetch(url, { method: 'HEAD' }); await res.arrayBuffer(); available = res.ok; }
     catch { available = false; }
     entry.button.hidden = !available;
   }

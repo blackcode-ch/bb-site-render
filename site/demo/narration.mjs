@@ -17,7 +17,7 @@ export function createNarration({ lang, slugs }) {
   let current = null; // { entry, release } for the clip currently playing or being waited on
 
   const availabilityChecked = Promise.all(entries.map(async entry => {
-    try { const res = await fetch(entry.audio.src, { method: 'HEAD' }); entry.available = res.ok; }
+    try { const res = await fetch(entry.audio.src, { method: 'HEAD' }); await res.arrayBuffer(); entry.available = res.ok; }
     catch { entry.available = false; }
   }));
 
