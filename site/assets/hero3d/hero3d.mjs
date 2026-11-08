@@ -4,7 +4,7 @@ import {buildAppliance} from './hardware-model.mjs';
 import {batchRigidParts} from './batch.mjs';
 import {poseAt, IDLE_RESUME} from './motion.mjs';
 
-export function mountHero(canvas, {still=false, explosion=null, zoom=1, onStateChange=()=>{}, onLabel=()=>{}}={}) {
+export function mountHero(canvas, {still=false, explosion=null, zoom=1, fit=false, onStateChange=()=>{}, onLabel=()=>{}}={}) {
   let renderer;
   try { renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,preserveDrawingBuffer:still,powerPreference:'low-power'}); }
   catch { return null; }
@@ -27,10 +27,25 @@ export function mountHero(canvas, {still=false, explosion=null, zoom=1, onStateC
   function cancel(){cancelAnimationFrame(raf);raf=0;previous=null;clearTimeout(resumeTimer);resumeTimer=0;}
   function armResume(){clearTimeout(resumeTimer);resumeTimer=0;if(active()&&!paused&&!drag&&holdUntil>performance.now())resumeTimer=setTimeout(()=>{notify();schedule();},holdUntil-performance.now()+1);}
   function schedule(){if(active()&&!raf&&(dirty||automatic()))raf=requestAnimationFrame(tick);else armResume();}
+  // Optional tight framing follows the existing model through its exploded poses.
+  const fitBounds=new THREE.Box3(),fitCenter=new THREE.Vector3(),fitCorner=new THREE.Vector3();
+  const fitDirection=new THREE.Vector3(5.6,5.4,7.2).normalize();
+  const fitRight=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),fitDirection).normalize();
+  const fitUp=new THREE.Vector3().crossVectors(fitDirection,fitRight);
+  function frameModel(){
+    pivot.updateMatrixWorld(true);fitBounds.setFromObject(pivot);fitBounds.getCenter(fitCenter);
+    const tangent=Math.tan(THREE.MathUtils.degToRad(camera.fov/2));let distance=0;
+    for(const x of [fitBounds.min.x,fitBounds.max.x])for(const y of [fitBounds.min.y,fitBounds.max.y])for(const z of [fitBounds.min.z,fitBounds.max.z]){
+      fitCorner.set(x,y,z).sub(fitCenter);
+      distance=Math.max(distance,Math.max(Math.abs(fitCorner.dot(fitRight))/(tangent*camera.aspect),Math.abs(fitCorner.dot(fitUp))/tangent)+fitCorner.dot(fitDirection));
+    }
+    camera.clearViewOffset();camera.position.copy(fitCenter).addScaledVector(fitDirection,distance*1.08);camera.lookAt(fitCenter);
+  }
   function render(){
     const pose=poseAt(elapsed),opening=explosion??pose.open;model.explode(opening);
     model.parts.lid.position.y+=opening*.35;
     pivot.rotation.set(offsetPitch,pose.yaw+offsetYaw,0);
+    if(fit)frameModel();
     renderer.render(scene,camera);frames++;
     if(performance.now()-lastLabel>90||dirty){
       lastLabel=performance.now();

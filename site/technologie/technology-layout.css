@@ -5,7 +5,8 @@ main.c-col .tech-hero h1{font-size:clamp(40px,4.6vw,64px);max-width:16ch}
 main.c-col .tech-hero .hero-badge{margin-top:24px;padding-top:24px}
 .tech-hero .official-badge{max-width:150px}
 main.c-col #hero-box{width:100%;max-width:440px;min-width:0;margin:0 auto;background:transparent;border:0;align-self:center}
-#hero-box .box-3d{position:relative;height:360px;min-height:0}
+#hero-box .box-3d{position:relative;height:500px;min-height:0}
+#hero-box .box-callout{display:none}
 #hero-box .box-canvas{display:block;width:100%;height:100%}
 #hero-box .box-canvas[hidden],#hero-box .box-still[hidden]{display:none}
 #hero-box .box-still{display:block;width:100%;height:100%;object-fit:contain}
@@ -25,14 +26,35 @@ main.c-col .journey li{padding-block:24px;border-bottom:1px solid var(--line)}
 main.c-col .journey li:last-child{border-bottom:0}
 main.c-col .journey p{max-width:68ch}
 /* Prose-only sections form a centred reading column instead of an empty half-row. */
-main.c-col .content-section:not(#le-cadre-qui-convient-a-votre-etude):not(#secret-professionnel-et-nlpd):not(#une-methode-pas-un-outil-de-plus),main.c-col #la-box,main.c-col #pilote{max-width:780px;margin-inline:auto}
+main.c-col #la-box,main.c-col #pilote{max-width:780px;margin-inline:auto}
 main.c-col #comment-on-travaille .journey{max-width:none}
 main.c-col .content-prose{max-width:none}
+main.c-col .tech-illustration{width:100%;max-width:440px;margin:32px auto 0}
+main.c-col .tech-illustration img{display:block;width:100%;height:auto}
+main.c-col .tech-pair-copy>h2{max-width:none}
+main.c-col .tech-dossier-grid{border-top:1px solid var(--line);padding:var(--sec) 0}
+main.c-col .tech-dossier-grid .content-section{padding:32px 0;margin:0;border:0;max-width:none}
+main.c-col .tech-dossier-grid .content-section:first-child{padding-top:0}
+main.c-col .tech-dossier-grid h2{font-size:clamp(28px,2.3vw,34px);max-width:none}
+main.c-col #secret-professionnel-et-nlpd>h2,main.c-col #secret-professionnel-et-nlpd>.section-intro{max-width:780px;margin-inline:auto;text-align:center}
+main.c-col .tech-card-wide{width:100%;max-width:780px;margin-inline:auto}
+main.c-col .tech-card-wide h3{text-align:center}
+main.c-col .tech-card-wide p{max-width:none}
+main.c-col #la-box .figures-intro{max-width:none}
+main.c-col #la-box .figures-heading,main.c-col #pilote h2{max-width:none;text-align:center}
+main.c-col #la-box .figures-panel,main.c-col #pilote{text-align:center}
+main.c-col #la-box .single-box{text-align:center}
+main.c-col #pilote .lead{margin-inline:auto;max-width:60ch}
+main.c-col .tech-dossier-grid+p{max-width:780px;margin:0 auto 32px;text-align:center}
 @media(min-width:900px){
  main.c-col .tech-hero{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;padding:48px;margin-bottom:112px}
  main.c-col #le-cadre-qui-convient-a-votre-etude,main.c-col #une-methode-pas-un-outil-de-plus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 48px;align-items:center}
  main.c-col #le-cadre-qui-convient-a-votre-etude .content-grid{grid-column:1/-1;margin-top:16px}
  main.c-col #une-methode-pas-un-outil-de-plus .method-diagram{margin:0 auto}
+ main.c-col .content-section.tech-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:center}
+ main.c-col .tech-pair .tech-illustration{margin:0 auto}
+ main.c-col .tech-dossier-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+ main.c-col .tech-dossier-grid .content-section{padding:0}
 }
-@media(max-width:420px){main.c-col .tech-hero{padding:24px 16px}#hero-box .box-3d{height:300px}}
+@media(max-width:420px){main.c-col .tech-hero{padding:24px 16px}#hero-box .box-3d{height:380px}}
 @media(prefers-reduced-motion:reduce){#hero-box .box-3d{height:auto}#hero-box .box-still{height:auto}}
