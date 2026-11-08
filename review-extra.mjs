@@ -44,7 +44,7 @@ try {
     const cta=page.locator('main [data-questionnaire-cta]');
     if(await cta.count()!==1)throw new Error('In-page CTA missing: '+route+lang);
     const href=await cta.getAttribute('href');
-    const expected=route.startsWith('/en/')?'en':lang;
+    const expected=route.startsWith('/en/')?'en':route==='/comprendre-ia/'?'fr':lang;
     if(href!=='/sur-mesure/'+(expected==='fr'?'':'?lang='+expected))throw new Error('Wrong CTA destination: '+href);
     const name=route.replaceAll('/','_')+lang;
     if(lang==='fr'||lang==='en'){
