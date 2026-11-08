@@ -37,7 +37,7 @@
       document.querySelectorAll('[data-i="ch"]').forEach(e => e.textContent = dict.ch);
       document.querySelectorAll('[data-i="ide"]').forEach(e => e.textContent = dict.ide);
       document.querySelectorAll('[data-i="vat"]').forEach(e => e.textContent = dict.vat);
-      document.querySelectorAll('[data-i="vatNumber"]').forEach(e => e.textContent = 'CHE-114.555.500 ' + dict.vat);
+      document.querySelectorAll('[data-i="vatNumber"]').forEach(e => e.textContent = 'IDE/TVA CHE-114.555.500 TVA');
       document.querySelectorAll('[data-i="created"]').forEach(e => e.textContent = dict.created);
       document.querySelectorAll('[data-i="since2008"]').forEach(e => e.textContent = dict.since2008);
     });

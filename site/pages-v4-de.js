@@ -22,7 +22,7 @@ Créé par|Entwickelt von|Created by
 Suisse|Schweiz|Switzerland
 IDE|UID|UID
 TVA|MWST|VAT
-CHE-114.555.500 TVA|CHE-114.555.500 MWST|CHE-114.555.500 VAT
+IDE/TVA CHE-114.555.500 TVA|IDE/TVA CHE-114.555.500 TVA|IDE/TVA CHE-114.555.500 TVA
 Retour à l’accueil|Zur Startseite|Back to home
 Pour la sécurité|Für Sicherheitsbehörden|For security
 Pour la gestion de fortune|Für die Vermögensverwaltung|For wealth management

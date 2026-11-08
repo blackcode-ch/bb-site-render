@@ -22,7 +22,7 @@ Créé par|Creato da
 Suisse|Svizzera
 IDE|IDI
 TVA|IVA
-CHE-114.555.500 TVA|CHE-114.555.500 IVA
+IDE/TVA CHE-114.555.500 TVA|IDE/TVA CHE-114.555.500 TVA
 Retour à l’accueil|Torna alla home
 Pour la sécurité|Per la sicurezza
 Pour la gestion de fortune|Per la gestione patrimoniale
