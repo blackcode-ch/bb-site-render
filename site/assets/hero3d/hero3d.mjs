@@ -32,14 +32,19 @@ export function mountHero(canvas, {still=false, explosion=null, zoom=1, fit=fals
   const fitDirection=new THREE.Vector3(5.6,5.4,7.2).normalize();
   const fitRight=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),fitDirection).normalize();
   const fitUp=new THREE.Vector3().crossVectors(fitDirection,fitRight);
+  const fitMeshes=[];
+  if(fit)pivot.traverse(mesh=>{if(mesh.isMesh){mesh.geometry.computeBoundingBox();fitMeshes.push(mesh);}});
   function frameModel(){
     pivot.updateMatrixWorld(true);fitBounds.setFromObject(pivot);fitBounds.getCenter(fitCenter);
     const tangent=Math.tan(THREE.MathUtils.degToRad(camera.fov/2));let distance=0;
-    for(const x of [fitBounds.min.x,fitBounds.max.x])for(const y of [fitBounds.min.y,fitBounds.max.y])for(const z of [fitBounds.min.z,fitBounds.max.z]){
-      fitCorner.set(x,y,z).sub(fitCenter);
-      distance=Math.max(distance,Math.max(Math.abs(fitCorner.dot(fitRight))/(tangent*camera.aspect),Math.abs(fitCorner.dot(fitUp))/tangent)+fitCorner.dot(fitDirection));
+    for(const mesh of fitMeshes){
+      const bounds=mesh.geometry.boundingBox;
+      for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z]){
+        fitCorner.set(x,y,z).applyMatrix4(mesh.matrixWorld).sub(fitCenter);
+        distance=Math.max(distance,Math.max(Math.abs(fitCorner.dot(fitRight))/(tangent*camera.aspect),Math.abs(fitCorner.dot(fitUp))/tangent)+fitCorner.dot(fitDirection));
+      }
     }
-    camera.clearViewOffset();camera.position.copy(fitCenter).addScaledVector(fitDirection,distance*1.08);camera.lookAt(fitCenter);
+    camera.clearViewOffset();camera.position.copy(fitCenter).addScaledVector(fitDirection,distance*1.04);camera.lookAt(fitCenter);
   }
   function render(){
     const pose=poseAt(elapsed),opening=explosion??pose.open;model.explode(opening);
