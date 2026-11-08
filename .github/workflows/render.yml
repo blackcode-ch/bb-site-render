@@ -25,6 +25,8 @@ jobs:
       - run: node shoot.mjs
         env:
           BASE_URL: ${{ inputs.base_url }}
+      - run: node review-extra.mjs
+        if: ${{ !inputs.base_url }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
