@@ -5,6 +5,8 @@
 .c-ref,.c-fact-ref{font-size:13px;white-space:nowrap;color:var(--red)}
 .c-ref,.c-fact-ref,.c-sources a{text-underline-offset:3px}
 .c-campaign-hero{margin-bottom:0}
+/* The campaign owns its title/lead grid; its charts follow on a full-width row. */
+.c-home .c-hero:has(>.c-campaign-hero){display:block}
 .c-campaign-hero .c-lede{margin-top:0}
 .c-finance{margin-top:48px}
 .c-finance>figcaption{color:var(--ink);margin-bottom:24px}

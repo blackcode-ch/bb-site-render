@@ -4,7 +4,8 @@
    6/6 text+image (image 440px) or 3 columns. Everything else is one column. */
 main.c-home{--s2:8px;--s4:16px;--s6:24px;--s8:32px;--s12:48px;--section:64px;--page:1200px;--measure:60ch;font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.6}
 .c-home *{box-sizing:border-box}
-.c-home h1,.c-home h2,.c-home h3,.c-home p,.c-home figure{margin:0}
+/* Keep the reset weaker than the component spacing rules below. */
+.c-home :where(h1,h2,h3,p,figure){margin:0}
 .c-home h1,.c-home h2,.c-home h3{font-weight:400;letter-spacing:-.045em;text-wrap:balance;font-family:Arial,Helvetica,sans-serif}
 .c-home h1{font-size:clamp(44px,5.1vw,72px);line-height:1.05;max-width:18ch}
 .c-home h2{font-size:clamp(32px,3.2vw,46px);line-height:1.12;max-width:24ch}
@@ -37,6 +38,9 @@ main.c-home{--s2:8px;--s4:16px;--s6:24px;--s8:32px;--s12:48px;--section:64px;--p
 .c-card h3{margin:8px 0 12px}.c-card p,.c-steps p{color:var(--muted)}.c-steps p{margin-top:12px}
 .c-desktop-illustration{display:none}
 .c-final-copy{display:contents}.c-final-copy .c-aside{margin-top:24px}.c-final-copy .c-aside .c-actions{margin-top:0}
+/* Legacy hash targets remain reachable without occupying a grid cell. */
+.c-fixed-pair{position:relative}
+.c-fixed-pair>span[aria-hidden="true"][id]{position:absolute;top:0;left:0}
 @media(min-width:900px){
  main.c-home{--section:112px}
  .c-hero,.c-fixed-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;align-items:center}

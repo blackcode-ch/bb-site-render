@@ -24,7 +24,7 @@ try {
     const allowed = url => !new URL(url).pathname.startsWith('/investisseurs');
     page.on('console',m=>{if(m.type()==='error') result.consoleErrors.push(m.text());});
     page.on('pageerror',e=>result.pageErrors.push(e.message));
-    page.on('requestfailed',r=>{if(allowed(r.url())) result.failedRequests.push({url:r.url(),error:r.failure()?.errorText});});
+    page.on('requestfailed',r=>{if(allowed(r.url())) result.failedRequests.push({url:r.url(),method:r.method(),type:r.resourceType(),error:r.failure()?.errorText});});
     page.on('response',r=>{if(r.status()>=400&&allowed(r.url())) result.httpErrors.push({url:r.url(),status:r.status()});});
     try {
       await page.goto(origin+path,{waitUntil:'networkidle',timeout:45000});

@@ -6,7 +6,7 @@ main.c-col *{min-width:0}
 main.c-col img,main.c-col svg,main.c-col video,main.c-col iframe,main.c-col canvas{max-width:100%}
 main.c-col img{height:auto}
 main.c-col .tag{margin:0 0 24px}
-main.c-col .page-intro{display:block;padding:0 0 var(--sec)}
+main.c-col .page-intro{display:block;padding:0 0 var(--sec);border:0;background:none}
 main.c-col .page-intro>*+*{margin-top:24px}
 main.c-col h1{font-size:clamp(40px,5.1vw,72px);line-height:1.05;font-weight:400;letter-spacing:-.045em;max-width:18ch;text-wrap:balance;margin:0}
 main.c-col h2{font-size:clamp(30px,3.2vw,46px);line-height:1.12;font-weight:400;letter-spacing:-.04em;max-width:24ch;text-wrap:balance;margin:0 0 24px}
@@ -30,3 +30,5 @@ main.c-col table{display:block;max-width:100%;overflow-x:auto}
  main.c-col .topic-links{display:flex;flex-wrap:wrap}
 }
 @media(max-width:420px){main.c-col .cta{width:100%;justify-content:center}}
+/* Keep every replay choice visible in the mobile demo. */
+@media(max-width:760px){main.c-col .replay-chips{display:grid;grid-template-columns:minmax(0,1fr);overflow:visible}main.c-col .replay-chips button{white-space:normal;text-align:left}}
