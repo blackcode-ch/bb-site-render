@@ -30,7 +30,8 @@ try {
       await page.goto(origin+path,{waitUntil:'networkidle',timeout:45000});
       await page.evaluate(()=>document.fonts.ready);
       // Trigger lazy images and scroll animations before capturing the whole page.
-      await page.evaluate(async()=>{for(let y=0;y<document.documentElement.scrollHeight;y+=600){scrollTo(0,y);await new Promise(r=>setTimeout(r,80));}scrollTo(0,0);});
+      await page.addStyleTag({content:'html,body{scroll-behavior:auto!important}'});
+      await page.evaluate(async()=>{for(let y=0;y<document.documentElement.scrollHeight;y+=600){scrollTo({top:y,behavior:'instant'});await new Promise(r=>setTimeout(r,100));}scrollTo({top:0,behavior:'instant'});await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})));});
       await page.waitForTimeout(600);
       Object.assign(result,await page.evaluate(()=>({overflow:Math.max(document.documentElement.scrollWidth,document.body.scrollWidth)-innerWidth,overflowElements:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&(r.right>innerWidth+1||r.left< -1);}).slice(0,30).map(e=>({tag:e.tagName,class:e.className,id:e.id})),missingImages:[...document.images].filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src)})));
       result.screenshot=`${size.width}-${path==='/'?'home':path.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'')}.jpg`;
