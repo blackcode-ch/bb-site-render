@@ -1,4 +1,35 @@
 (() => {
+  // Shared public discovery link; investor pages retain their existing navigation.
+  if (!location.pathname.startsWith('/investisseurs/')) {
+    if (!document.querySelector('link[href*="questionnaire-cta.css"]')) {
+      const style = document.createElement('link');
+      style.rel = 'stylesheet'; style.href = '/questionnaire-cta.css?v=1';
+      document.head.append(style);
+    }
+    const nav = document.querySelector('.primary-nav');
+    if (nav && !nav.querySelector('[data-questionnaire-cta]')) {
+      const link = document.createElement('a');
+      link.className = 'questionnaire-cta'; link.dataset.questionnaireCta = '';
+      link.href = '/sur-mesure/'; nav.append(link);
+    }
+    const labels = {
+      fr: 'Composez votre Brigitte en 2 minutes',
+      en: 'Build your Brigitte in 2 minutes',
+      de: 'Stellen Sie Ihre Brigitte in 2 Minuten zusammen',
+      it: 'Componete la vostra Brigitte in 2 minuti',
+      es: 'Configure su Brigitte en 2 minutos'
+    };
+    const updateQuestionnaire = () => {
+      const lang = location.pathname.startsWith('/en/') ? 'en' : document.documentElement.lang;
+      document.querySelectorAll('[data-questionnaire-cta]').forEach(link => {
+        link.textContent = labels[lang] || labels.fr;
+        link.href = '/sur-mesure/' + (lang && lang !== 'fr' ? '?lang=' + lang : '');
+      });
+    };
+    updateQuestionnaire();
+    document.addEventListener('DOMContentLoaded', updateQuestionnaire);
+    new MutationObserver(updateQuestionnaire).observe(document.documentElement, {attributes:true, attributeFilter:['lang']});
+  }
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.menu-toggle');
   if (header && toggle) {

@@ -1,0 +1,14 @@
+/* Secondary questionnaire action. Booking remains the solid primary button. */
+a.questionnaire-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;padding:12px 20px;border:1px solid currentColor;background:transparent;color:var(--ink,#20211f);font:500 16px/1.4 Arial,Helvetica,sans-serif;text-align:center;text-decoration:none;box-sizing:border-box;white-space:normal}
+a.questionnaire-cta:hover{background:var(--ink,#20211f);color:var(--paper,#f5f3ed);text-decoration:none}
+a.questionnaire-cta:focus-visible{outline:3px solid var(--red,#bd282d);outline-offset:4px}
+.questionnaire-end{padding:48px 0 64px;border-top:1px solid var(--line);width:min(1200px,calc(100% - 48px));margin-inline:auto}
+main.c-col .questionnaire-end{width:100%}
+.questionnaire-after-demo{margin:32px 0}
+.primary-nav .questionnaire-cta{font-size:13px;min-height:44px;padding:10px 16px;white-space:normal}
+@media(min-width:1101px){
+ .site-header:has(.questionnaire-cta)>.w{flex-wrap:wrap;row-gap:0;padding-bottom:10px}
+ .primary-nav .questionnaire-cta{order:4;flex-basis:100%;margin-top:0;min-height:36px;padding:6px 16px}
+}
+@media(max-width:1100px){.primary-nav .questionnaire-cta{grid-column:1/-1;margin:8px 0}}
+@media(max-width:600px){.c-actions .questionnaire-cta,.questionnaire-end .questionnaire-cta,.questionnaire-after-demo .questionnaire-cta{width:100%}}
