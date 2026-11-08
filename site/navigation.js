@@ -1,16 +1,10 @@
 (() => {
-  // Shared public discovery link; investor pages retain their existing navigation.
+  // Translate in-page discovery links; investor pages retain their existing navigation.
   if (!location.pathname.startsWith('/investisseurs/')) {
     if (!document.querySelector('link[href*="questionnaire-cta.css"]')) {
       const style = document.createElement('link');
       style.rel = 'stylesheet'; style.href = '/questionnaire-cta.css?v=1';
       document.head.append(style);
-    }
-    const nav = document.querySelector('.primary-nav');
-    if (nav && !nav.querySelector('[data-questionnaire-cta]')) {
-      const link = document.createElement('a');
-      link.className = 'questionnaire-cta'; link.dataset.questionnaireCta = '';
-      link.href = '/sur-mesure/'; nav.append(link);
     }
     const labels = {
       fr: 'Composez votre Brigitte en 2 minutes',
