@@ -3,7 +3,7 @@ import { spawn } from 'node:child_process';
 import { mkdir, writeFile, readFile } from 'node:fs/promises';
 
 if (process.platform === 'win32') throw new Error('Rendering is restricted to GitHub Actions; no Windows browser.');
-const pages = ['/', '/?lang=en', '/?lang=de', '/comprendre-ia/', '/en/understanding-ai/', '/comprendre-ia/sources/', '/technologie/', '/sur-mesure/', '/cas-usage/', '/justitia/', '/demo/', '/videos/', '/confidentialite/'];
+const pages = ['/', '/?lang=en', '/?lang=de', '/comprendre-ia/', '/en/understanding-ai/', '/comprendre-ia/sources/', '/technologie/', '/sur-mesure/', '/cas-usage/', '/justitia/', '/demo/', '/videos/', '/confidentialite/', '/millennium/'];
 const sizes = [{width:390,height:844,isMobile:true,hasTouch:true},{width:1440,height:900,isMobile:false,hasTouch:false}];
 const baseUrl = process.env.BASE_URL?.trim();
 const origin = baseUrl ? new URL(baseUrl).href.replace(/\/$/, '') : 'http://127.0.0.1:8765';
