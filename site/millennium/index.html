@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>L’entreprise agentique · Une soirée pour les études d’avocats</title>
+<meta name="description" content="Une conférence gratuite sur les agents et la souveraineté de l’IA, pour les études d’avocats. Inscrivez votre intérêt.">
+<link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="millennium.css">
+<script src="signup.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#inscription">Aller à l’inscription</a>
+<header class="wrap"><a class="wordmark" href="/" aria-label="Brigitte, accueil">brigitte<span aria-hidden="true">+</span></a><span class="edition">RENCONTRE · ÉTUDES D’AVOCATS</span></header>
+<main class="wrap">
+<section class="intro" aria-labelledby="titre">
+<p class="eyebrow">UNE SOIRÉE POUR ÉCHANGER</p>
+<h1 id="titre">L’entreprise agentique<span>Les agents et la souveraineté de l’IA</span></h1>
+<p class="lede">Des collaborateurs IA dans votre étude : pour faire quoi, sous quel contrôle, et avec quelles données ? Prenons le temps d’en parler entre avocats et spécialistes de l’IA.</p>
+<div class="facts"><span>Gratuit, sur inscription</span><span>Environ 2 h 30</span><span>Décembre 2026 ou janvier 2027</span></div>
+<p class="confirmation">Date et lieu confirmés dès 10 inscriptions.</p>
+<a class="button" href="#inscription">Je souhaite participer <span aria-hidden="true">↗</span></a>
+</section>
+<div class="details">
+<section class="programme" aria-labelledby="programme">
+<p class="eyebrow">AU PROGRAMME</p><h2 id="programme">Comprendre.<br>Questionner.<br>Échanger.</h2>
+<ol>
+<li><h3>L’entreprise agentique</h3><p>Ce que des agents peuvent préparer dans une étude, et les décisions qui restent entre vos mains.</p><span>20 min</span></li>
+<li><h3>La souveraineté de l’IA</h3><p>Où vont les données ? Parlons confidentialité, secret professionnel et maîtrise des outils.</p><span>20 min</span></li>
+<li><h3>Vos questions, autour de la table</h3><p>Table ronde, questions de la salle, puis apéritif et échanges libres. Une démonstration pour les curieux.</p></li>
+</ol>
+<p class="note">Programme indicatif, avec un temps d’accueil. Les modalités seront précisées après confirmation.</p>
+</section>
+<section class="registration" id="inscription" aria-labelledby="form-title">
+<p class="eyebrow">INSCRIPTION D’INTÉRÊT</p><h2 id="form-title">Une place dans<br>la conversation.</h2>
+<p>Sans engagement. Nous vous recontacterons pour confirmer la date et le lieu.</p>
+<p class="note">Les champs marqués * sont obligatoires.</p>
+<form action="/api/millennium-signup" method="post">
+<div class="pair"><label>Prénom *<input name="prenom" autocomplete="given-name" maxlength="80" required></label><label>Nom *<input name="nom" autocomplete="family-name" maxlength="80" required></label></div>
+<label>Étude / organisation *<input name="etude" autocomplete="organization" maxlength="160" required></label>
+<label>Fonction <span>(facultatif)</span><input name="fonction" autocomplete="organization-title" maxlength="100"></label>
+<label>E-mail *<input type="email" name="email" autocomplete="email" maxlength="254" required></label>
+<label>Téléphone <span>(facultatif)</span><input type="tel" name="telephone" autocomplete="tel" maxlength="40"></label>
+<div class="pair"><label>Date préférée *<select name="date" required><option value="sans-preference">Sans préférence</option><option value="decembre-2026">Décembre 2026</option><option value="janvier-2027">Janvier 2027</option></select></label><label>Personnes *<select name="personnes" required><option value="1">1 personne</option><option value="2">2 personnes</option><option value="3">3 personnes</option></select></label></div>
+<label>Une question à aborder ? <span>(facultatif)</span><textarea name="commentaire" maxlength="500" rows="3" aria-describedby="comment-help"></textarea></label><p class="note" id="comment-help">500 caractères maximum. N’indiquez aucune information liée à un dossier client.</p>
+<div class="honeypot" aria-hidden="true"><label>Ne pas remplir<input name="website" tabindex="-1" autocomplete="off" maxlength="200"></label></div>
+<label class="consent"><input type="checkbox" name="consentement" value="oui" required><span>J’accepte d’être recontacté au sujet de cette conférence. *</span></label>
+<p class="note privacy">Les inscriptions sont enregistrées dans notre propre outil de suivi, pour l’organisation de cette conférence. <a href="/confidentialite/">Confidentialité</a></p>
+<button class="button" type="submit">Enregistrer mon intérêt <span aria-hidden="true">↗</span></button>
+<p id="status" role="status" aria-live="polite" tabindex="-1"></p>
+<noscript><p class="note">JavaScript est désactivé. Après l’envoi, une page affichera la confirmation ou une erreur.</p></noscript>
+</form>
+</section>
+</div>
+</main>
+<footer class="wrap"><span>Une rencontre proposée par Brigitte Box · blackcode SA</span><a href="/confidentialite/">Confidentialité</a></footer>
+</body>
+</html>

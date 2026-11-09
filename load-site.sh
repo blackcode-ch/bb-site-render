@@ -10,6 +10,7 @@ python - "$stage/monday-launch/site" <<'PY'
 import pathlib, shutil, sys, re
 root = pathlib.Path(sys.argv[1])
 shutil.rmtree(root / 'investisseurs', ignore_errors=True)
+shutil.rmtree(root / 'api', ignore_errors=True)
 patterns = ['middleware.js','vercel.json','i18n-*-investors.js','*.md','.env*','*.test.mjs','verify*.mjs','*verification*','*.log']
 for pattern in patterns:
     for path in root.rglob(pattern):
